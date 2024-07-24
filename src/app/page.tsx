@@ -6,7 +6,7 @@ const Home: FC = () => {
         <>
             <section>
                 <Wrapper>
-                    Home
+                    Staking
                 </Wrapper>
             </section>
         </>

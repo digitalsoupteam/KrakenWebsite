@@ -1,0 +1,43 @@
+.inner {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 0;
+        justify-content: space-between;
+    }
+}
+
+.nav {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navLink {
+    color: var(--grey);
+    font-size: 20px;
+    transition: var(--tr-default);
+
+    &:active {
+        opacity: 0.6;
+    }
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            color: var(--white);
+        }
+    }
+}
