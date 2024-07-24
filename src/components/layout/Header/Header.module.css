@@ -1,0 +1,135 @@
+.root {
+}
+
+.inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.logo {
+    width: 246px;
+
+    @media screen and (min-width: 768px) {
+        width: 220px;
+    }
+}
+
+.logoImage {
+    width: 100%;
+    height: auto;
+}
+
+.root .burgerButton {
+    padding: 13px 17px;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--light);
+    min-height: 40px;
+
+    &:active {
+        color: var(--white);
+    }
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            color: var(--white);
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.burgerButton span {
+    height: 2px;
+    background-color: currentColor;
+    width: 18px;
+    transition: var(--tr-default);
+}
+
+.burgerButtonActive {
+    & span:first-child {
+        transform: rotate(45deg) translateY(1px) translateX(2px);
+    }
+
+    & span:nth-child(2) {
+        display: none;
+    }
+
+    & span:last-child {
+        transform: rotate(-45deg) translateY(-2px) translateX(3px);
+    }
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    position: absolute;
+    top: calc(100% - 20px);
+    right: 0;
+    padding: 12px 20px;
+    background-color: var(--secondary);
+    border-radius: var(--br-medium);
+
+    @media screen and (min-width: 1024px) {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+.menuOpened {
+    display: flex;
+}
+
+.menuLink {
+    color: var(--light);
+    font-size: 20px;
+    transition: var(--tr-default);
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            color: var(--white);
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        border: 1px solid var(--blue-dark);
+        border-radius: var(--br-medium);
+        padding: 6px 24px;
+        background: var(--dark-gradient);
+
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                color: var(--light);
+                background: var(--dark-gradient-hover);
+            }
+        }
+    }
+}
+
+.login {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+        position: static;
+        margin: 0;
+    }
+}

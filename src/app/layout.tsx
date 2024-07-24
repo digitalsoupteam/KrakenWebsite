@@ -1,6 +1,9 @@
 import React, {FC, PropsWithChildren} from "react";
 import type {Metadata} from "next";
 import {Bebas_Neue} from "next/font/google";
+
+import {Footer, Header} from "@/components/layout";
+
 import "./globals.css";
 
 const BebasNeue = Bebas_Neue({
@@ -19,11 +22,11 @@ const RootLayout: FC<PropsWithChildren> = ({children}) => {
     return (
         <html lang="en">
         <body className={BebasNeue.className}>
-        <header>Header</header>
+        <Header />
         <main>
             {children}
         </main>
-        <footer>Footer</footer>
+        <Footer />
         </body>
         </html>
     );
