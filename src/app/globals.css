@@ -7,11 +7,18 @@
   --grey: #6A6A6A;
   --primary: #5440e2;
   --light: #5B53BE;
+  --primary-transparent: #372685;
   --secondary: #262169;
   --blue-dark: #100C31;
+  --purple-medium: #400179;
+  --purple-dark: #0E0119;
+
   --dark-gradient: linear-gradient(180deg, #0a0724 0%, #100c31 100%);
   --dark-gradient-hover: linear-gradient(180deg, #0a0724 0%, #19115b 100%);
-  --purple-dark: #0E0119;
+  --card-gradient: linear-gradient(180deg, #5440e2 0%, #4c2397 100%);
+
+  --indent: 20px;
+
   --br-medium: 16px;
   --br-large: 24px;
 
@@ -31,6 +38,10 @@
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  font-family: inherit;
 }
 
 ul {

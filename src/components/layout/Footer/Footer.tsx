@@ -39,8 +39,8 @@ const Footer: FC = () => {
                 whileInView="visible"
                 viewport={{once: true}}
                 transition={{
-                    delay: 1,
-                    duration: 1,
+                    delay: 0.5,
+                    duration: 0.8,
                     ease: 'easeInOut',
                 }}
                 variants={{
@@ -60,7 +60,7 @@ const Footer: FC = () => {
                 whileInView="visible"
                 viewport={{once: true}}
                 transition={{
-                    duration: 1,
+                    duration: 0.8,
                     ease: 'easeInOut',
                 }}
                 variants={{

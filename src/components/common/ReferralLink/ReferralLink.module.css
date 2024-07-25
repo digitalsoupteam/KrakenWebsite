@@ -1,0 +1,31 @@
+.root {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: var(--br-medium);
+    color: var(--white);
+    padding: 2px 14px;
+    font-size: 14px;
+    line-height: 1;
+    transition: var(--tr-default);
+
+    &:active {
+        opacity: 0.6;
+    }
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            background-color: var(--light);
+        }
+    }
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}

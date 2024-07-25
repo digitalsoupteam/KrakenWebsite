@@ -1,0 +1,192 @@
+.root {
+    border-radius: var(--br-large);
+    box-shadow: 4px 4px 30px 0 rgba(9, 7, 34, 0.79);
+    padding: 20px 16px;
+    background:
+            url('/staking-bg.png'),
+            var(--card-gradient);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 28px;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: var(--indent);
+}
+
+.label {
+    position: relative;
+}
+
+.labelText {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transform: translateY(-50%);
+    color: var(--white);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.labelIcon {
+    width: 23px;
+    height: 23px;
+}
+
+.amount {
+    margin-bottom: var(--indent);
+}
+
+.amountAdditional {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--secondary);
+    font-size: 18px;
+    line-height: 133%;
+    margin-bottom: 4px;
+}
+
+.maxAmount {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.maxAmountButton,
+.buyMore {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.maxAmountButton {
+    cursor: pointer;
+    padding: 2px 0 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--secondary);
+    line-height: 1;
+}
+
+.duration {
+    margin-bottom: var(--indent);
+}
+
+.itemTitle {
+    color: var(--white);
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 12px;
+}
+
+.durationInput {
+    pointer-events: none;
+}
+
+.durationControls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.additional {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--indent);
+    margin-bottom: var(--indent);
+}
+
+.additionalCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border-radius: var(--br-medium);
+    background-color: var(--primary-transparent);
+    box-shadow: inset 0 -4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 12px 18px;
+}
+
+.additionalText {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 133%;
+}
+
+.additionalTextLight {
+    color: var(--light);
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.pointsIcon {
+    width: 16px;
+    height: 18px;
+}
+
+.submit {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--primary);
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.submit:not(:disabled) {
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            background: linear-gradient(90deg, #39217d 0%, #4a40cd 50.5%, #39217d 100%);
+
+            .tentacleLeft {
+                left: 0;
+            }
+
+            .tentacleRight {
+                right: 0;
+            }
+        }
+    }
+}
+
+.submit:disabled {
+    color: var(--light);
+    background-color: var(--primary-transparent);
+    box-shadow: inset 0 -4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.tentacleLeft {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -120px;
+    transition: var(--tr-default);
+}
+
+.tentacleRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -120px;
+    transition: var(--tr-default);
+}
