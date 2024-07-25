@@ -1,6 +1,8 @@
 import React, {FC, PropsWithChildren} from "react";
+import clsx from "clsx";
 import type {Metadata} from "next";
 import {Bebas_Neue} from "next/font/google";
+import localFont from 'next/font/local';
 
 import {Footer, Header} from "@/components/layout";
 
@@ -12,6 +14,18 @@ const BebasNeue = Bebas_Neue({
     subsets: ['latin']
 });
 
+const DarkHornetItalic = localFont({
+    src: [
+        {
+            path: './fonts/DarkHornetItalic.woff2',
+            weight: '400',
+            style: 'normal',
+        },
+    ],
+    display: 'swap',
+    variable: '--dark-hornet-italic',
+});
+
 export const metadata: Metadata = {
     title: "Kraken staking",
     description: "Kraken staking",
@@ -21,7 +35,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<PropsWithChildren> = ({children}) => {
     return (
         <html lang="en">
-        <body className={BebasNeue.className}>
+        <body className={clsx(BebasNeue.className, DarkHornetItalic.variable)}>
         <Header />
         <main>
             {children}

@@ -1,3 +1,52 @@
+.kraken {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: url('/solana.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 335px;
+}
+
+.krakenInner {
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--dark-hornet-italic);
+    color: var(--purple-dark);
+    font-size: 29px;
+    line-height: 177%;
+}
+
+.krakenImage {
+    width: 251px;
+    height: 245px;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.tokenImg {
+    min-width: 1536px;
+    object-position: center;
+    width: 100%;
+    height: auto;
+}
+
 .inner {
     padding: 16px 0;
     display: flex;
