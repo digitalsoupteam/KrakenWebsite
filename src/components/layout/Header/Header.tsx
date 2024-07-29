@@ -8,8 +8,11 @@ import clsx from "clsx";
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
 import LoginIcon from '/public/login.svg';
+import {CustomWalletConnectButton} from "@/components/common";
+import {WalletMultiButton} from "@solana/wallet-adapter-react-ui";
 
 import styles from './Header.module.css';
+
 
 const Header: FC = () => {
     const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -56,9 +59,11 @@ const Header: FC = () => {
                     ))}
                 </ul>
 
-                <Button className={styles.login}>
-                    <LoginIcon /> Log In
-                </Button>
+                <CustomWalletConnectButton className={styles.login} />
+
+                {/*<Button className={styles.login}>*/}
+                {/*    <LoginIcon/> Log In*/}
+                {/*</Button>*/}
             </div>
         </Wrapper>
     </header>

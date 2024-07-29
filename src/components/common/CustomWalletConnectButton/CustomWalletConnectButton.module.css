@@ -1,0 +1,40 @@
+.root {
+    & button {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        font-family: inherit;
+        justify-content: center;
+        gap: 8px;
+        background-color: var(--secondary);
+        border-radius: var(--br-medium);
+        padding: 8px 16px;
+        border: none;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        transition: var(--tr-default);
+        height: fit-content;
+
+        & svg {
+            color: var(--light);
+            transition: var(--tr-default);
+        }
+
+        &:active {
+            background-color: var(--primary);
+        }
+
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                background-color: var(--primary);
+
+                & svg {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
