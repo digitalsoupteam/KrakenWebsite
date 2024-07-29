@@ -5,9 +5,9 @@ import clsx from "clsx";
 
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
+import {Background, Staking} from "@/components/common";
 
 import styles from './Home.module.css';
-import {Staking} from "@/components/common";
 
 const Home: FC = () => {
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -37,7 +37,11 @@ const Home: FC = () => {
                                 <Button
                                     className={clsx(styles.tabButton, currentTabIndex === index && styles.tabButtonActive)}
                                     onClick={() => setCurrentTabIndex(index)}
-                                    key={item.button}>{item.button}</Button>
+                                    key={item.button}
+                                    disabled={index > 0}
+                                >
+                                    {item.button}
+                                </Button>
                             ))
                         }
                     </div>
@@ -46,6 +50,8 @@ const Home: FC = () => {
                     </div>
                 </Wrapper>
             </section>
+
+            <Background />
         </>
     );
 }

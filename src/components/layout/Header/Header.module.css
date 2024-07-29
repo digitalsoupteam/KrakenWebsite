@@ -1,9 +1,9 @@
 .root {
-    margin-bottom: 110px;
+    /*margin-bottom: 110px;*/
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 70px;
-    }
+    /*@media screen and (min-width: 768px) {*/
+    /*    margin-bottom: 70px;*/
+    /*}*/
 }
 
 .inner {

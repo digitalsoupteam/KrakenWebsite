@@ -32,3 +32,8 @@
         margin-bottom: 158px;
     }
 }
+
+.tabButton:disabled {
+    background-color: var(--grey);
+    opacity: 0.5;
+}
