@@ -2,10 +2,8 @@
 
 import React, {FC} from 'react';
 
-import {About, Hero} from "@/components/home";
+import {About, Hero, Tokenomics} from "@/components/home";
 import {Partners} from "@/components/common";
-
-import styles from './Home.module.css';
 
 const Home: FC = () => {
     return (
@@ -15,6 +13,8 @@ const Home: FC = () => {
             <Partners />
 
             <About />
+
+            <Tokenomics />
         </>
     );
 }

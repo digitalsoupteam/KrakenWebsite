@@ -19,6 +19,14 @@
     /*text-shadow: 0 4px 4px rgba(84, 64, 226, 0.34);*/
 }
 
+.big {
+    font-size: 36px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 46px;
+    }
+}
+
 .medium {
     font-size: 36px;
     line-height: 180%;

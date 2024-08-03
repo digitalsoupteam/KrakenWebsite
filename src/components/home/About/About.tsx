@@ -10,7 +10,7 @@ import Image from "next/image";
 const About: FC = () => {
     const animationDuration = 0.8;
 
-    return <section className={styles.root}>
+    return <section className={styles.root} id="about">
         <Wrapper>
             <motion.div
                 className={styles.inner}

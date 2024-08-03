@@ -5,7 +5,7 @@ import styles from './Title.module.css';
 
 interface TitleProps {
     className?: string;
-    size?: 'medium' | 'small';
+    size?: 'big' | 'medium' | 'small';
     as?: 'h1 | h2 | h3 | h4 | h5 | h6';
 }
 
