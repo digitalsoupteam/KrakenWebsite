@@ -2,8 +2,8 @@
 
 import React, {FC} from 'react';
 
-import Hero from "@/components/home/Hero/Hero";
-import Partners from "@/components/common/Partners/Partners";
+import {About, Hero} from "@/components/home";
+import {Partners} from "@/components/common";
 
 import styles from './Home.module.css';
 
@@ -13,6 +13,8 @@ const Home: FC = () => {
             <Hero />
 
             <Partners />
+
+            <About />
         </>
     );
 }
