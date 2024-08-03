@@ -28,8 +28,8 @@ const DarkHornetItalic = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Kraken staking",
-    description: "Kraken staking",
+    title: "Kraken",
+    description: "Kraken",
 };
 
 

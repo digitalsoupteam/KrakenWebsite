@@ -67,9 +67,4 @@ body {
 main {
     flex-grow: 1;
     position: relative;
-    padding-top: 110px;
-
-    @media screen and (min-width: 768px) {
-        padding-top: 70px;
-    }
 }

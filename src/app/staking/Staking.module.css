@@ -1,0 +1,47 @@
+.tabs {
+    padding-top: 110px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 70px;
+    }
+}
+
+.tabsButtons {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin: 0 auto 40px;
+    width: fit-content;
+}
+
+.tabsButtons .tabButton {
+    border-radius: 0;
+}
+
+.tabsButtons .tabButton:first-child {
+    border-radius: var(--br-medium) 0 0 var(--br-medium);
+}
+
+.tabsButtons .tabButton:last-child {
+    border-radius: 0 var(--br-medium) var(--br-medium) 0;
+}
+
+
+.tabsButtons .tabButtonActive {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.staking {
+    margin: 0 auto 257px;
+    max-width: 516px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 158px;
+    }
+}
+
+.tabButton:disabled {
+    background-color: var(--grey);
+    opacity: 0.5;
+}

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import {Button, Input, Label, Title} from "@/components/ui";
 import Radio from "@/components/ui/Radio/Radio";
 import PointsIcon from '/public/kraken-small.svg';
-import {ReferralLink} from "@/components/common";
+import {CopyLink} from "@/components/common";
 
 import styles from './Staking.module.css';
 
@@ -113,7 +113,7 @@ const Staking: FC<StakingProps> = ({className}) => {
                 <div className={styles.additionalCard}>
                     <div className={styles.additionalText}>Get more points</div>
                     <div className={clsx(styles.additionalText, styles.additionalTextLight)}>0 referrals</div>
-                    <ReferralLink className={styles.referralLink}/>
+                    <CopyLink className={styles.referralLink} text={'Referral link'} copyText={'Referral link'} />
                 </div>
             </div>
 

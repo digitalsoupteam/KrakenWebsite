@@ -7,9 +7,7 @@ import clsx from "clsx";
 
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
-import LoginIcon from '/public/login.svg';
 import {CustomWalletConnectButton} from "@/components/common";
-import {WalletMultiButton} from "@solana/wallet-adapter-react-ui";
 
 import styles from './Header.module.css';
 
@@ -19,11 +17,11 @@ const Header: FC = () => {
     const menuItems = [
         {
             name: 'About',
-            link: '#',
+            link: '/#about',
         },
         {
             name: 'Tokenomics',
-            link: '#',
+            link: '/#tokenomics',
         },
         {
             name: 'Nft',
@@ -31,16 +29,16 @@ const Header: FC = () => {
         },
         {
             name: 'Stake',
-            link: '#',
+            link: '/staking/',
         },
     ];
 
     return <header className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <div className={styles.logo}>
+                <Link className={styles.logo} href={"/"}>
                     <Image className={styles.logoImage} src="/logo.png" width="246" height="40" alt={""}/>
-                </div>
+                </Link>
 
                 <Button className={clsx(styles.burgerButton, isMenuOpened && styles.burgerButtonActive)}
                         onClick={() => setIsMenuOpened(!isMenuOpened)}>
@@ -60,10 +58,6 @@ const Header: FC = () => {
                 </ul>
 
                 <CustomWalletConnectButton className={styles.login} />
-
-                {/*<Button className={styles.login}>*/}
-                {/*    <LoginIcon/> Log In*/}
-                {/*</Button>*/}
             </div>
         </Wrapper>
     </header>
