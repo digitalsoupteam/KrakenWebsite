@@ -31,7 +31,7 @@ const Footer: FC = () => {
         },
     ];
 
-    return <footer>
+    return <footer className={styles.root}>
         <section className={styles.kraken}>
             <motion.div
                 className={styles.krakenInner}

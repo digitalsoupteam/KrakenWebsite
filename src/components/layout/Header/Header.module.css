@@ -1,4 +1,6 @@
 .root {
+    z-index: 1;
+    position: relative;
     /*margin-bottom: 110px;*/
 
     /*@media screen and (min-width: 768px) {*/
@@ -15,6 +17,7 @@
 }
 
 .logo {
+    display: block;
     width: 246px;
 
     @media screen and (min-width: 768px) {
@@ -57,18 +60,16 @@
     transition: var(--tr-default);
 }
 
-.burgerButtonActive {
-    & span:first-child {
-        transform: rotate(45deg) translateY(1px) translateX(2px);
-    }
+.burgerButtonActive span:first-child {
+    transform: rotate(45deg) translateY(1px) translateX(2px);
+}
 
-    & span:nth-child(2) {
-        display: none;
-    }
+.burgerButtonActive span:nth-child(2) {
+    display: none;
+}
 
-    & span:last-child {
-        transform: rotate(-45deg) translateY(-2px) translateX(3px);
-    }
+.burgerButtonActive span:last-child {
+    transform: rotate(-45deg) translateY(-2px) translateX(3px);
 }
 
 .menu {

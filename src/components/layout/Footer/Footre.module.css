@@ -1,3 +1,7 @@
+.root {
+    background-color: var(--black);
+}
+
 .kraken {
     position: relative;
     display: flex;

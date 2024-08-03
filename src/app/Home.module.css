@@ -1,5 +1,4 @@
 .tabsButtons {
-    background-color: var(--black);
     display: flex;
     align-items: center;
     gap: 1px;
@@ -9,15 +8,16 @@
 
 .tabsButtons .tabButton {
     border-radius: 0;
-
-    &:first-child {
-        border-radius: var(--br-medium) 0 0 var(--br-medium);
-    }
-
-    &:last-child {
-        border-radius: 0 var(--br-medium) var(--br-medium) 0;
-    }
 }
+
+.tabsButtons .tabButton:first-child {
+    border-radius: var(--br-medium) 0 0 var(--br-medium);
+}
+
+.tabsButtons .tabButton:last-child {
+    border-radius: 0 var(--br-medium) var(--br-medium) 0;
+}
+
 
 .tabsButtons .tabButtonActive {
     color: var(--white);

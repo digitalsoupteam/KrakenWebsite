@@ -71,7 +71,7 @@ const Staking: FC<StakingProps> = ({className}) => {
                     <div className={styles.maxAmount}>
                         Available:
                         <button className={styles.maxAmountButton} type='button'
-                                onClick={() => setAmountValue(23.4234)}>23.4234</button>
+                                onClick={() => setAmountValue(23.42)}>23.42</button>
                     </div>
                     <Link className={styles.buyMore} href={'#'}>Get more</Link>
                 </div>
