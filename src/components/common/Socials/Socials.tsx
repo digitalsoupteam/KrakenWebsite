@@ -9,11 +9,11 @@ import styles from './Socials.module.css';
 const Socials: FC = () => {
     const socialItems = [
         {
-            link: '#',
+            link: 'https://t.me/thekrakencoin',
             icon: <TelegramIcon className={styles.icon}/>
         },
         {
-            link: '#',
+            link: 'https://twitter.com/TheKrakenCoin',
             icon: <TwitterIcon className={styles.icon}/>
         }
     ];
@@ -22,7 +22,7 @@ const Socials: FC = () => {
         {
             socialItems && socialItems.length && socialItems.map(item => (
                 <li key={item.link}>
-                    <Link className={styles.link} href={item.link}>
+                    <Link className={styles.link} href={item.link} target={'_blank'}>
                         {item.icon}
                     </Link>
                 </li>

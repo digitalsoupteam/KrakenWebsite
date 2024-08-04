@@ -1,0 +1,171 @@
+.root {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        background-image: url('/bg-desktop.png');
+    }
+}
+
+.list {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    counter-reset: custom-counter;
+    display: flex;
+    padding-top: 10vw;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        left: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+}
+
+.item {
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(10, 7, 34) 60%);
+    border-radius: 4vw;
+    font-size: 3.5vw;
+    width: 46vw;
+
+    &::before {
+        z-index: 1;
+        content: counter(custom-counter);
+        counter-increment: custom-counter;
+        display: inline-block;
+        position: absolute;
+        bottom: 95%;
+        font-family: var(--dark-hornet-italic);
+        font-weight: 700;
+        text-align: center;
+        padding-right: 1vw;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(10, 7, 34) 70%);
+        width: 13vw;
+        line-height: 120%;
+        height: 11vw;
+        left: 0;
+        font-size: 8vw;
+        border-radius: 2vw;
+    }
+
+    &:first-child {
+        margin-left: auto;
+
+        &::before {
+            background-color: #541242;
+        }
+
+        @media screen and (min-width: 768px) {
+            top: 32vw;
+            width: 16vw;
+            left: 3vw;
+            margin: 0;
+        }
+    }
+
+    &:nth-child(2) {
+        &::before {
+            background-color: green;
+        }
+
+        @media screen and (min-width: 768px) {
+            top: 40vw;
+            left: 35vw;
+        }
+    }
+
+    &:nth-child(3) {
+        margin-left: auto;
+
+        @media screen and (min-width: 768px) {
+            width: 18vw;
+            top: 5vw;
+            left: 36vw;
+            margin: 0;
+        }
+    }
+
+    &:nth-child(4) {
+        @media screen and (min-width: 768px) {
+            width: 11vw;
+            top: 23vw;
+            right: 5vw;
+        }
+    }
+
+
+    @media screen and (min-width: 768px) {
+        padding: 20px;
+        font-size: 1.3vw;
+        position: absolute;
+        border-radius: 1.2vw;
+        width: 17vw;
+
+        &::before {
+            left: -10%;
+            width: 5vw;
+            height: 5vw;
+            border-radius: 1.2vw;
+            font-size: 4vw;
+            line-height: 110%;
+        }
+    }
+}
+
+.roadmap {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: pulse 3s ease-in-out infinite alternate-reverse;
+}
+
+.asteroids {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center right;
+    animation: UpDown 2.5s ease-in-out infinite alternate-reverse;
+
+    @media screen and (min-width: 768px) {
+        top: 20%;
+        left: auto;
+        width: 80%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(0.96);
+    }
+}
+
+@keyframes UpDown {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
