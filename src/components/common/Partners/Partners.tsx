@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {motion} from "framer-motion";
 
 import {Wrapper} from "@/components/layout";
 
@@ -39,12 +40,25 @@ const Partners: FC = () => {
         <Wrapper>
             <ul className={styles.list}>
                 {
-                    partners && partners.length && partners.map(partner => (
-                        <li>
+                    partners && partners.length && partners.map((partner, index) => (
+                        <motion.li
+                            key={partner.name}
+                            initial="hidden"
+                            whileInView="visible"
+                            transition={{
+                                duration: 0.8,
+                                ease: 'easeInOut',
+                                delay: 0.1 * index
+                            }}
+                            variants={{
+                                hidden: { y: 100, opacity: 0 },
+                                visible: { y: 0, opacity: 1 },
+                            }}
+                        >
                             <Link href={partner.link} target={'_blank'}>
                                 <Image className={styles.logo} src={partner.logo} width="300" height="100" alt={partner.name}/>
                             </Link>
-                        </li>
+                        </motion.li>
                     ))
                 }
             </ul>
