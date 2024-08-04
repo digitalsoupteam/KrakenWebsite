@@ -15,11 +15,11 @@ const Footer: FC = () => {
     const menuItems = [
         {
             name: 'About',
-            link: '#',
+            link: '/#about',
         },
         {
             name: 'Tokenomics',
-            link: '#',
+            link: '/#tokenomics',
         },
         {
             name: 'Nft',
@@ -27,7 +27,7 @@ const Footer: FC = () => {
         },
         {
             name: 'Stake',
-            link: '#',
+            link: '/staking/',
         },
     ];
 
@@ -85,7 +85,7 @@ const Footer: FC = () => {
                     </ul>
                 </nav>
 
-                <Button href={'https://t.me/krkn'} target="_blank">
+                <Button href={'https://t.me/thekrakencoin'} target="_blank">
                     <TelegramIcon/>
                     Telegram
                 </Button>
