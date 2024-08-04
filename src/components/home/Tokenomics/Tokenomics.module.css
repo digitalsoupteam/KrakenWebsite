@@ -13,6 +13,11 @@
 
 .list {
     display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
 }
 
 .item {
@@ -21,11 +26,24 @@
     padding: var(--indent);
     text-align: center;
 
+    & br {
+        display: none;
+    }
+
     &:not(:last-child) {
-        border-right: 1px solid var(--grey);
+        border-bottom: 1px solid var(--grey);
     }
 
     @media screen and (min-width: 768px) {
         font-size: 30px;
+
+        & br {
+            display: initial;
+        }
+
+        &:not(:last-child) {
+            border-bottom: none;
+            border-right: 1px solid var(--grey);
+        }
     }
 }
