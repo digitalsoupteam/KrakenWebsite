@@ -18,8 +18,7 @@
 }
 
 .logo {
-    width: 100%;
-    height: auto;
+    width: auto;
     max-height: 40px;
     transition: var(--tr-default);
 
