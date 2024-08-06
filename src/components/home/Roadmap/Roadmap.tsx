@@ -6,25 +6,38 @@ import styles from './Roadmap.module.css';
 
 const Roadmap: FC = () => {
     const items = [
-        <>
-            Listing on CEX <br/>
-            Listing RELEASE KRAKEN on CEX
-        </>,
-        <>
-            NFT minting <br/>
-            Building 444 unique NFTs. Minting RELEASE THE KRAKEN collection. Listing collection on Magic Eden.
-        </>,
-        <>
-            Geocaching platform and $KRAKEN fund.
-            Building $KRAKEN Geocaching WEB3 platform. Launch the platform and start geocaching all over the
-            world.
-            Launch $KRAKEN charity fund for the protection of World’s Ocean.
-        </>,
-        <>
-            Listing on CEX <br/>
-            Listing RELEASE KRAKEN on CEX
-        </>
+        {
+            name: 'listing DEX',
+            content: <>
+                Listing on DEX <br/>
+                The first stage of $KRAKEN. Listing on Solana ecosystem DEX (Raydium, Jupiter).
+            </>,
+        },
+        {
+            name: 'Nft minting',
+            content: <>
+                NFT minting <br/>
+                Building 444 unique NFTs. Minting RELEASE THE KRAKEN collection. Listing collection on Magic Eden.
+            </>,
+        },
+        {
+            name: 'Geocaching',
+            content: <>
+                Geocaching platform and $KRAKEN fund.
+                Building $KRAKEN Geocaching WEB3 platform. Launch the platform and start geocaching all over the
+                world.
+                Launch $KRAKEN charity fund for the protection of World’s Ocean.
+            </>,
+        },
+        {
+            name: 'listing CEX',
+            content: <>
+                Listing on CEX <br/>
+                Listing RELEASE KRAKEN on CEX
+            </>
+        }
     ];
+
     return <section className={styles.root}>
         <picture>
             <source media="(min-width: 768px)" srcSet="/roadmap-desktop.png"/>
@@ -52,9 +65,9 @@ const Roadmap: FC = () => {
                         hidden: {y: 100, opacity: 0},
                         visible: {y: 0, opacity: 1},
                     }}
+                    key={item.name}
                 >
-                    Listing on CEX <br/>
-                    Listing RELEASE KRAKEN on CEX
+                    {item.content}
                 </motion.li>
             ))}
         </ol>
