@@ -1,0 +1,117 @@
+.root {
+    width: 100%;
+    max-width: 282px;
+    justify-self: center;
+    padding: var(--indent);
+    background: var(--card-gradient);
+    border-radius: var(--br-large);
+}
+
+.heading {
+    display: grid;
+    grid-template-areas:
+        'logo title'
+        'logo date';
+    grid-template-columns: 60px 1fr;
+    gap: 2px var(--indent);
+    margin-bottom: var(--indent);
+}
+
+.logo {
+    grid-area: logo;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    grid-area: title;
+    align-self: end;
+    color: var(--secondary);
+    font-size: 18px;
+    line-height: 133%;
+}
+
+.date {
+    grid-area: date;
+    align-self: start;
+    color: var(--white);
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.info {
+    margin-bottom: var(--indent);
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.points {
+    color: var(--white);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.staked {
+    color: var(--secondary);
+    padding-top: 6px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.krakenIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.unstake {
+}
+
+.button {
+    background-color: var(--primary);
+    padding: 12px;
+    width: 100%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 6px;
+
+    .lockedIcon {
+        display: none;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        color: var(--light);
+        background-color: var(--secondary);
+        box-shadow: none;
+
+        .lockedIcon {
+            display: block;
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.stakedFrom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--white);
+    font-size: 14px;
+    line-height: 170%;
+}

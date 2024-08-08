@@ -4,5 +4,7 @@ import CustomWalletConnectButton from "@/components/common/CustomWalletConnectBu
 import Background from './Background/Background';
 import Socials from "./Socials//Socials";
 import Partners from "./Partners/Partners";
+import Stakes from './Stakes/Stakes';
+import StakesItem from './StakesItem/StakesItem';
 
-export {Staking, CopyLink, CustomWalletConnectButton, Background, Socials, Partners};
+export {Staking, CopyLink, CustomWalletConnectButton, Background, Socials, Partners, Stakes, StakesItem};
