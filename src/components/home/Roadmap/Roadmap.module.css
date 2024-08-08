@@ -40,6 +40,14 @@
     border-radius: 4vw;
     font-size: 3.5vw;
     width: 46vw;
+
+    @media screen and (min-width: 768px) {
+        padding: 20px;
+        font-size: 1.3vw;
+        position: absolute;
+        border-radius: 1.2vw;
+        width: 17vw;
+    }
 }
 
 .item::before {
@@ -60,6 +68,17 @@
     left: 0;
     font-size: 8vw;
     border-radius: 2vw;
+}
+
+@media screen and (min-width: 768px) {
+    .item::before {
+        left: -10%;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 1.2vw;
+        font-size: 4vw;
+        line-height: 110%;
+    }
 }
 
 .item:first-child {
