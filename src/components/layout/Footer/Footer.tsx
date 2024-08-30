@@ -7,7 +7,7 @@ import {motion} from "framer-motion";
 
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
-import TelegramIcon from '/public/telegram.svg';
+import TelegramIcon from '/public/images/telegram.svg';
 
 import styles from './Footre.module.css';
 
@@ -49,7 +49,7 @@ const Footer: FC = () => {
                 }}
             >
                 <div className={styles.krakenImage}>
-                    <Image src={'/kraken.png'} width='251' height='245' alt=''/>
+                    <Image src={'/images/kraken.png'} width='251' height='245' alt=''/>
                 </div>
                 <h2 className={styles.title}>
                     Kraken on solana
@@ -68,7 +68,7 @@ const Footer: FC = () => {
                     visible: {y: 0, rotate: '0'},
                 }}
             >
-                <Image className={styles.tokenImg} src={'/tokens.png'} width='300' height='100' alt={''}/>
+                <Image className={styles.tokenImg} src={'/images/tokens.png'} width='300' height='100' alt={''}/>
             </motion.div>
         </section>
         <Wrapper>

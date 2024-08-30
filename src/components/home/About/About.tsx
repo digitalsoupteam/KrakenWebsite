@@ -25,7 +25,7 @@ const About: FC = () => {
                     visible: { y: 0, opacity: 1 },
                 }}
             >
-                <Image className={styles.logo} src='/logo.png' width="300" height="100" alt={'kraken logo'}/>
+                <Image className={styles.logo} src='/images/logo.png' width="300" height="100" alt={'kraken logo'}/>
                 <div className={styles.text}>
                     Kraken is a coin symbolizing the strength and power of the oceanic monster.<br/>
                     Its coins are virtual artifacts capable of navigation financial waves with impeccable
@@ -50,7 +50,7 @@ const About: FC = () => {
                 visible: { y: '0%', x: '0%', rotate: 0 },
             }}
         >
-            <Image src="/about-bg-tentacle-tl.png" width="300" height="100" alt={'Kraken tentacle'}/>
+            <Image src="/images/about-bg-tentacle-tl.png" width="300" height="100" alt={'Kraken tentacle'}/>
         </motion.div>
 
         <motion.div
@@ -69,7 +69,7 @@ const About: FC = () => {
                 visible: { y: '0%', x: '0%', rotate: 0 },
             }}
         >
-            <Image src="/about-bg-tentacle-tr.png" width="300" height="100" alt={'Kraken tentacle'}/>
+            <Image src="/images/about-bg-tentacle-tr.png" width="300" height="100" alt={'Kraken tentacle'}/>
         </motion.div>
 
         <motion.div
@@ -88,7 +88,7 @@ const About: FC = () => {
                 visible: { y: '0%', x: '0%', rotate: 0 },
             }}
         >
-            <Image src="/about-bg-tentacle-br.png" width="300" height="100" alt={'Kraken tentacle'}/>
+            <Image src="/images/about-bg-tentacle-br.png" width="300" height="100" alt={'Kraken tentacle'}/>
         </motion.div>
 
         <motion.div
@@ -107,7 +107,7 @@ const About: FC = () => {
                 visible: { y: '0%', x: '0%', rotate: 0 },
             }}
         >
-            <Image src="/about-bg-tentacle-bl.png" width="300" height="100" alt={'Kraken tentacle'}/>
+            <Image src="/images/about-bg-tentacle-bl.png" width="300" height="100" alt={'Kraken tentacle'}/>
         </motion.div>
     </section>
 };

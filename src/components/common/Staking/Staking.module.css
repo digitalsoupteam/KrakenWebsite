@@ -3,7 +3,7 @@
     box-shadow: 4px 4px 30px 0 rgba(9, 7, 34, 0.79);
     padding: 20px 16px;
     background:
-            url('/staking-bg.png'),
+            url('/images/staking-bg.png'),
             var(--card-gradient);
     background-size: contain;
     background-repeat: no-repeat;

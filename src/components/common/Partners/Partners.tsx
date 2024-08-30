@@ -12,27 +12,27 @@ const Partners: FC = () => {
         {
             name: 'coinmarketcap',
             link: 'https://coinmarketcap.com/',
-            logo: '/coimarketcap.png',
+            logo: '/images/coimarketcap.png',
         },
         {
             name: 'dextools',
             link: 'https://www.dextools.io/',
-            logo: '/dextools.png',
+            logo: '/images/dextools.png',
         },
         {
             name: 'solana',
             link: 'https://solana.com/',
-            logo: '/solana-logo.png',
+            logo: '/images/solana-logo.png',
         },
         {
             name: 'dexscreener',
             link: 'https://dexscreener.com/',
-            logo: '/dexscreener.png',
+            logo: '/images/dexscreener.png',
         },
         {
             name: 'raydium',
             link: 'https://raydium.io/',
-            logo: '/raydium.png',
+            logo: '/images/raydium.png',
         },
     ];
 

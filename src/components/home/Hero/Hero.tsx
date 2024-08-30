@@ -19,7 +19,7 @@ const Hero: FC = () => {
     return <section className={styles.root}>
         <Wrapper>
             <motion.div className={styles.inner} style={{y: useParallax(scrollYProgress, 100)}}>
-                <Image className={styles.logo} src={'/kraken.png'} width="300" height="100" alt={'kraken logo'}/>
+                <Image className={styles.logo} src={'/images/kraken.png'} width="300" height="100" alt={'kraken logo'}/>
 
                 <CopyLink text={'This will be the address of the token'}
                           copyText={'This will be the address of the token'} isLarge={true}/>

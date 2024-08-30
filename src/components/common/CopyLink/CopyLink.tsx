@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
-import CopyIcon from '/public/copy.svg';
+import CopyIcon from '/public/images/copy.svg';
 
 import styles from './CopyLink.module.css';
 

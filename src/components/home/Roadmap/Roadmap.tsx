@@ -40,13 +40,13 @@ const Roadmap: FC = () => {
 
     return <section className={styles.root}>
         <picture>
-            <source media="(min-width: 768px)" srcSet="/roadmap-desktop.png"/>
-            <Image className={styles.roadmap} src={'/roadmap-mobile.png'} width="300" height="100" alt="roadmap"/>
+            <source media="(min-width: 768px)" srcSet="/images/roadmap-desktop.png"/>
+            <Image className={styles.roadmap} src={'/images/roadmap-mobile.png'} width="300" height="100" alt="roadmap"/>
         </picture>
 
         <picture>
-            <source media="(min-width: 768px)" srcSet="/asteroids-big-desktop.png"/>
-            <Image className={styles.asteroids} src={'/asteroids-big-mobile.png'} width="300" height="100"
+            <source media="(min-width: 768px)" srcSet="/images/asteroids-big-desktop.png"/>
+            <Image className={styles.asteroids} src={'/images/asteroids-big-mobile.png'} width="300" height="100"
                    alt="asteroids"/>
         </picture>
 

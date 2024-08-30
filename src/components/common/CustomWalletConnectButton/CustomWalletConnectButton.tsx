@@ -7,7 +7,7 @@ import {useWalletMultiButton} from "@solana/wallet-adapter-base-ui";
 import {WalletMultiButton} from "@solana/wallet-adapter-react-ui";
 
 import {Button} from "@/components/ui";
-import LoginIcon from '/public/login.svg';
+import LoginIcon from '/public/images/login.svg';
 
 import styles from './CustomWalletConnectButton.module.css';
 

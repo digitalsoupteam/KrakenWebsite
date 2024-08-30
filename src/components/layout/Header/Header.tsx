@@ -37,7 +37,7 @@ const Header: FC = () => {
         <Wrapper>
             <div className={styles.inner}>
                 <Link className={styles.logo} href={"/"}>
-                    <Image className={styles.logoImage} src="/logo.png" width="246" height="40" alt={""}/>
+                    <Image className={styles.logoImage} src="/images/logo.png" width="246" height="40" alt={""}/>
                 </Link>
 
                 <Button className={clsx(styles.burgerButton, isMenuOpened && styles.burgerButtonActive)}

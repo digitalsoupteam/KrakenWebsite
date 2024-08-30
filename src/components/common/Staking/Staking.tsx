@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import {Button, Input, Label, Title} from "@/components/ui";
 import Radio from "@/components/ui/Radio/Radio";
-import PointsIcon from '/public/kraken-small.svg';
+import PointsIcon from '/public/images/kraken-small.svg';
 import {CopyLink} from "@/components/common";
 
 import styles from './Staking.module.css';
@@ -54,7 +54,7 @@ const Staking: FC<StakingProps> = ({className}) => {
             <div className={styles.amount}>
                 <Label className={clsx(styles.label, styles.amountInput)}>
                     <div className={styles.labelText}>
-                        <Image className={styles.labelIcon} src='/kraken.png' width='23' height='23' alt=''/>
+                        <Image className={styles.labelIcon} src='/images/kraken.png' width='23' height='23' alt=''/>
                         <span>RTK</span>
                     </div>
                     <Input
@@ -118,12 +118,12 @@ const Staking: FC<StakingProps> = ({className}) => {
             </div>
 
             <Button className={styles.submit} type={'submit'} disabled={!amountValue}>
-                <Image className={styles.tentacleLeft} src='/stake-button-left.png' width='115' height='48' alt=''/>
+                <Image className={styles.tentacleLeft} src='/images/stake-button-left.png' width='115' height='48' alt=''/>
 
                 {!amountValue && 'Enter RTK amount'}
                 {Boolean(amountValue) && 'Stake'}
 
-                <Image className={styles.tentacleRight} src='/stake-button-right.png' width='115' height='48' alt=''/>
+                <Image className={styles.tentacleRight} src='/images/stake-button-right.png' width='115' height='48' alt=''/>
             </Button>
         </form>
     </div>

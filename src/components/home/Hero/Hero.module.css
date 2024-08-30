@@ -1,6 +1,6 @@
 .root {
     min-height: calc(100vh - 106px);
-    background-image: url('/hero-bg.jpg');
+    background-image: url('/images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
