@@ -1,0 +1,5 @@
+.root {
+    background: var(--card-gradient);
+    border-radius: var(--br-large);
+    padding: var(--indent) 28px;
+}

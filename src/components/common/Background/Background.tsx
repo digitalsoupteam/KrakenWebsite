@@ -23,15 +23,7 @@ const Background: FC = () => {
     };
 
     useEffect(() => {
-        // const handleResize = () => {
         setIsWideWindow(window.matchMedia('(min-width: 768px)').matches);
-        // };
-
-        // handleResize();
-
-        // window.addEventListener('resize', handleResize);
-
-        // return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return <section className={styles.root} ref={sectionRef}>

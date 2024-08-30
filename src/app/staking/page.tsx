@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
-import {Background, Staking, Stakes} from "@/components/common";
+import {Background, Staking, Stakes, MyPoints} from "@/components/common";
 
 import styles from './Staking.module.css';
 
@@ -23,7 +23,7 @@ const StakingPage: FC = () => {
         },
         {
             button: 'My points',
-            content: <div>Points</div>
+            content: <MyPoints />
         }
     ];
 
@@ -37,7 +37,6 @@ const StakingPage: FC = () => {
                                 <Button
                                     className={clsx(styles.tabButton, currentTabIndex === index && styles.tabButtonActive)}
                                     onClick={() => setCurrentTabIndex(index)}
-                                    // disabled={index > 0}
                                     key={item.button}
                                 >
                                     {item.button}

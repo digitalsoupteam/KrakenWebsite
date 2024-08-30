@@ -1,0 +1,83 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 778px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.yourPoints {
+    position: relative;
+    background: var(--card-gradient);
+    border-radius: var(--br-large);
+    padding: var(--indent) 24px;
+}
+
+.yourPointsTitle {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.tentacles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: auto;
+    border-radius: var(--br-medium);
+}
+
+.yourPointsItem:not(:first-of-type) {
+    padding-top: 16px;
+}
+
+.yourPointsItem:not(:last-of-type) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.stakingPoints,
+.referralPoints {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.totalPoints {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.krakenIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.referralCta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    padding: 0 0 0 14px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    line-height: 1;
+    border-radius: var(--br-medium);
+}
+
+.referralCtaText {
+    padding: 2px 0;
+}
