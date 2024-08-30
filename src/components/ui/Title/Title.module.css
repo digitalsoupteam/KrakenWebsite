@@ -7,16 +7,21 @@
     text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(84, 64, 226, 0.34);
 }
 
-.root::before {
-    /*content: attr(data-text);*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*z-index: 1;*/
-    /*color: rgba(0, 0, 0, 0.1);*/
-    /*text-shadow: 0 4px 4px rgba(84, 64, 226, 0.34);*/
+.noShadow {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 400;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: transparent;
+    text-shadow: none;
+}
+
+.large {
+    font-size: 48px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 65px;
+    }
 }
 
 .big {

@@ -1,31 +1,41 @@
-import React, {FC, useRef} from 'react';
+import React, {FC} from 'react';
 import Image from "next/image";
-import {motion, useScroll, useTransform, MotionValue} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import {Wrapper} from "@/components/layout";
-import {CopyLink, Socials} from "@/components/common";
+import {Button, Text, Title} from "@/components/ui";
+import {Socials} from "@/components/common";
 
 import styles from './Hero.module.css';
 
 const Hero: FC = () => {
-    const targetRef = useRef(null);
-    const {scrollYProgress} = useScroll({target: targetRef});
-
-    const distanceDivider = 0.5;
-    const useParallax = (value: MotionValue, distance: number) => {
-        return useTransform(value, [0, 1], [0, distance / distanceDivider]);
-    };
-
     return <section className={styles.root}>
         <Wrapper>
-            <motion.div className={styles.inner} style={{y: useParallax(scrollYProgress, 100)}}>
-                <Image className={styles.logo} src={'/images/kraken.png'} width="300" height="100" alt={'kraken logo'}/>
+            <div className={styles.inner}>
+                <div className={styles.heroImage}>
+                    <motion.div className={styles.krakenImage}>
+                        <Image src={'/images/kraken.png'} width="297" height="231" alt="kraken"/>
+                    </motion.div>
+                    <motion.div className={styles.krakenLogo}>
+                        <Image src={'/images/logo.png'} width="326" height="72" alt="kraken logo"/>
+                    </motion.div>
+                </div>
 
-                <CopyLink text={'This will be the address of the token'}
-                          copyText={'This will be the address of the token'} isLarge={true}/>
-
-                <Socials/>
-            </motion.div>
+                <div className={styles.content}>
+                    <Title className={styles.title} size={'large'} isNoShadow={true}>Мы – Kraken ecosystem</Title>
+                    <Text className={styles.text}>
+                        Ваш мост между реальным миром и Web3. Выполняйте геокэшинг задания в реальном мире, стейкайте
+                        токен,
+                        холдите NFT, тапайте в игре и зарабатывайте
+                    </Text>
+                    <div className={styles.buttons}>
+                        <Button className={styles.buy} isLight={true} disabled={true} locked={true}>
+                            Buy kraken
+                        </Button>
+                        <Socials/>
+                    </div>
+                </div>
+            </div>
         </Wrapper>
     </section>
 };

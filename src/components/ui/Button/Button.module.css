@@ -23,14 +23,35 @@
         background-color: var(--primary);
     }
 
+    &:disabled {
+        color: var(--light);
+        border: 1px solid var(--light);
+        background-color: var(--secondary);
+    }
+
+
+
     @media (hover: hover) {
-        &:hover,
-        &:focus {
-            background-color: var(--primary);
+        &:hover:not(:disabled),
+        &:focus:not(:disabled) {
+            background-color: var(--secondary);
 
             & svg {
                 color: var(--white);
             }
         }
     }
+}
+
+.light {
+    background-color: var(--primary);
+
+    &:active {
+        background-color: var(--secondary);
+    }
+}
+
+.locked {
+    width: 26px;
+    height: 26px;
 }
