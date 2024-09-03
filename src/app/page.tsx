@@ -2,7 +2,7 @@
 
 import React, {FC} from 'react';
 
-import {About, Ecosystem, Hero, Roadmap, Tags, Tokenomics} from "@/components/home";
+import {About, Ecosystem, Hero, Roadmap, Subscription, Tags, Tokenomics} from "@/components/home";
 import {Partners} from "@/components/common";
 
 const Home: FC = () => {
@@ -19,6 +19,8 @@ const Home: FC = () => {
             <Partners/>
 
             <Roadmap/>
+
+            <Subscription/>
 
             <Tokenomics/>
         </>
