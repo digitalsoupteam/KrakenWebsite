@@ -1,114 +1,77 @@
 import React, {FC} from 'react';
+import Image from "next/image";
 import clsx from "clsx";
 import {motion} from "framer-motion";
 
 import {Wrapper} from "@/components/layout";
+import {Button, Text, Title} from "@/components/ui";
+import ArrowIcon from '/public/images/arrow.svg';
 
 import styles from './About.module.css';
-import Image from "next/image";
 
 const About: FC = () => {
-    const animationDuration = 0.8;
+    const itemsLeft = [
+        {
+            name: 'Лаунчпад для запуска проектов',
+        },
+        {
+            name: 'Игра Release the kraken',
+        },
+        {
+            name: 'Игра TAP–TO–EARN',
+            link: 'https://t.me/kraken_tap_to_earn_bot/kraken_tap_to_earn'
+        },
+        {
+            name: 'Стейкинг',
+            link: '/staking/'
+        }
+    ];
+
+    const itemsRight = [
+        {
+            name: 'Utility – токен',
+            link: '#'
+        },
+        {
+            name: 'Квесты и геокэшинг ',
+        },
+        {
+            name: 'Редкие NFT',
+        },
+        {
+            name: 'Благотворительность',
+        }
+    ];
 
     return <section className={styles.root} id="about">
-        <Wrapper>
-            <motion.div
-                className={styles.inner}
-                initial="hidden"
-                whileInView="visible"
-                transition={{
-                    duration: animationDuration,
-                    ease: 'easeInOut',
-                }}
-                variants={{
-                    hidden: { y: 100, opacity: 0 },
-                    visible: { y: 0, opacity: 1 },
-                }}
-            >
-                <Image className={styles.logo} src='/images/logo.png' width="300" height="100" alt={'kraken logo'}/>
-                <div className={styles.text}>
-                    Kraken is a coin symbolizing the strength and power of the oceanic monster.<br/>
-                    Its coins are virtual artifacts capable of navigation financial waves with impeccable
-                    efficiency.<br/>
-                    Use Kraken coin to dive into the world of digital finance and dominate the cryptocurrency market.
-                </div>
-            </motion.div>
-        </Wrapper>
+            <div className={styles.textContainer}>
+                <Wrapper>
+                    <Title className={styles.title} size={'big'} isNoShadow={true} as={'h2'}>What is kraken?</Title>
+                    <Text className={styles.text} size={'medium'}>KRAKEN – это большая экосистема на SOL, цель которой – привлечь как можно больше криптанов/людей/проектов из Web2, показать им как пользоваться экосистемой. Каждый сможет найти для себя utility на платформе:</Text>
+                </Wrapper>
+            </div>
 
-        <motion.div
-            className={clsx(styles.tentacle, styles.tentacleTopLeft)}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-                type: 'spring',
-                duration: animationDuration,
-                mass: 20,
-                stiffness: 25
-            }}
-            variants={{
-                hidden: { y: '0%', x: '-50%', rotate: -15 },
-                visible: { y: '0%', x: '0%', rotate: 0 },
-            }}
-        >
-            <Image src="/images/about-bg-tentacle-tl.png" width="300" height="100" alt={'Kraken tentacle'}/>
-        </motion.div>
-
-        <motion.div
-            className={clsx(styles.tentacle, styles.tentacleTopRight)}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-                type: 'spring',
-                duration: animationDuration,
-                mass: 20,
-                stiffness: 25,
-                delay: 0.1
-            }}
-            variants={{
-                hidden: { y: '0%', x: '50%', rotate: 15 },
-                visible: { y: '0%', x: '0%', rotate: 0 },
-            }}
-        >
-            <Image src="/images/about-bg-tentacle-tr.png" width="300" height="100" alt={'Kraken tentacle'}/>
-        </motion.div>
-
-        <motion.div
-            className={clsx(styles.tentacle, styles.tentacleBottomRight)}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-                type: 'spring',
-                duration: animationDuration,
-                mass: 20,
-                stiffness: 25,
-                delay: 0.2
-            }}
-            variants={{
-                hidden: { y: '0%', x: '50%', rotate: 15 },
-                visible: { y: '0%', x: '0%', rotate: 0 },
-            }}
-        >
-            <Image src="/images/about-bg-tentacle-br.png" width="300" height="100" alt={'Kraken tentacle'}/>
-        </motion.div>
-
-        <motion.div
-            className={clsx(styles.tentacle, styles.tentacleBottomLeft)}
-            initial="hidden"
-            whileInView="visible"
-            transition={{
-                type: 'spring',
-                duration: animationDuration,
-                mass: 20,
-                stiffness: 25,
-                delay: 0.3
-            }}
-            variants={{
-                hidden: { y: '0%', x: '-50%', rotate: -15 },
-                visible: { y: '0%', x: '0%', rotate: 0 },
-            }}
-        >
-            <Image src="/images/about-bg-tentacle-bl.png" width="300" height="100" alt={'Kraken tentacle'}/>
-        </motion.div>
+            <div className={styles.projects}>
+                <Wrapper>
+                    <div className={styles.projectsLeft}>
+                        {itemsLeft && itemsLeft.map((item) => (
+                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link}>
+                                {item.name} {item.link && <ArrowIcon/>}
+                            </Button>
+                        ))}
+                    </div>
+                    <motion.div className={styles.kraken}>
+                        <Image src="/images/kraken-on-whale.png" width="363" height="340" alt=""/>
+                    </motion.div>
+                    <div className={styles.projectsRight}>
+                        {itemsRight && itemsRight.map((item) => (
+                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link}>
+                                {item.name} {item.link && <ArrowIcon/>}
+                            </Button>
+                        ))}
+                    </div>
+                </Wrapper>
+            </div>
     </section>
 };
 

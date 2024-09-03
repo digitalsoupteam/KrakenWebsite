@@ -23,7 +23,7 @@ const Hero: FC = () => {
 
                 <div className={styles.content}>
                     <Title className={styles.title} size={'large'} isNoShadow={true}>Мы – Kraken ecosystem</Title>
-                    <Text className={styles.text}>
+                    <Text className={styles.text} size={'big'}>
                         Ваш мост между реальным миром и Web3. Выполняйте геокэшинг задания в реальном мире, стейкайте
                         токен,
                         холдите NFT, тапайте в игре и зарабатывайте

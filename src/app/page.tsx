@@ -12,9 +12,9 @@ const Home: FC = () => {
 
             <Tags/>
 
-            <Partners/>
-
             <About/>
+
+            <Partners/>
 
             <Roadmap/>
 
