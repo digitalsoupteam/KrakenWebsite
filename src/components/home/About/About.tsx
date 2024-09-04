@@ -55,7 +55,7 @@ const About: FC = () => {
                 <Wrapper>
                     <div className={styles.projectsLeft}>
                         {itemsLeft && itemsLeft.map((item) => (
-                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link}>
+                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link} key={item.name}>
                                 {item.name} {item.link && <ArrowIcon/>}
                             </Button>
                         ))}
