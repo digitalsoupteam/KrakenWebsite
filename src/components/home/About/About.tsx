@@ -65,7 +65,7 @@ const About: FC = () => {
                     </motion.div>
                     <div className={styles.projectsRight}>
                         {itemsRight && itemsRight.map((item) => (
-                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link}>
+                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link} key={item.name}>
                                 {item.name} {item.link && <ArrowIcon/>}
                             </Button>
                         ))}

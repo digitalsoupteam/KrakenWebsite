@@ -26,7 +26,7 @@ const Button: FC<IButtonProps> = ({className, onClick, children, href, target, t
         {...(target && {target})}
         {...(type && {type})}
         {...(disabled && {disabled})}
-        {...(locked && {locked})}
+        {...(locked && {locked: locked.toString()})}
     >
         {children}
         {locked && <LockedIcon className={styles.locked}/>}
