@@ -37,6 +37,7 @@ const StakingPage: FC = () => {
                                 <Button
                                     className={clsx(styles.tabButton, currentTabIndex === index && styles.tabButtonActive)}
                                     onClick={() => setCurrentTabIndex(index)}
+                                    disabled={index > 0}
                                     key={item.button}
                                 >
                                     {item.button}
