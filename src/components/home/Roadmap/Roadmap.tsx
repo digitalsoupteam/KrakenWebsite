@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import Image from "next/image";
 
 import styles from './Roadmap.module.css';
+import {Title} from "@/components/ui";
 
 const Roadmap: FC = () => {
     const items = [
@@ -39,38 +40,43 @@ const Roadmap: FC = () => {
     ];
 
     return <section className={styles.root}>
-        <picture>
-            <source media="(min-width: 768px)" srcSet="/images/roadmap-desktop.png"/>
-            <Image className={styles.roadmap} src={'/images/roadmap-mobile.png'} width="300" height="100" alt="roadmap"/>
-        </picture>
+        <Title className={styles.title} size={'medium'} isNoShadow={true} as={'h2'}>KRAKEN Roadmap</Title>
 
-        <picture>
-            <source media="(min-width: 768px)" srcSet="/images/asteroids-big-desktop.png"/>
-            <Image className={styles.asteroids} src={'/images/asteroids-big-mobile.png'} width="300" height="100"
-                   alt="asteroids"/>
-        </picture>
+        <div className={styles.content}>
+            <picture>
+                <source media="(min-width: 768px)" srcSet="/images/roadmap-desktop.png"/>
+                <Image className={styles.roadmap} src={'/images/roadmap-mobile.png'} width="300" height="100"
+                       alt="roadmap"/>
+            </picture>
 
-        <ol className={styles.list}>
-            {items && items.length && items.map((item, index) => (
-                <motion.li
-                    className={styles.item}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                        duration: 0.8,
-                        ease: 'easeInOut',
-                        delay: 0.1 * index
-                    }}
-                    variants={{
-                        hidden: {y: 100, opacity: 0},
-                        visible: {y: 0, opacity: 1},
-                    }}
-                    key={item.name}
-                >
-                    {item.content}
-                </motion.li>
-            ))}
-        </ol>
+            <picture>
+                <source media="(min-width: 768px)" srcSet="/images/asteroids-big-desktop.png"/>
+                <Image className={styles.asteroids} src={'/images/asteroids-big-mobile.png'} width="300" height="100"
+                       alt="asteroids"/>
+            </picture>
+
+            <ol className={styles.list}>
+                {items && items.length && items.map((item, index) => (
+                    <motion.li
+                        className={styles.item}
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{
+                            duration: 0.8,
+                            ease: 'easeInOut',
+                            delay: 0.1 * index
+                        }}
+                        variants={{
+                            hidden: {y: 100, opacity: 0},
+                            visible: {y: 0, opacity: 1},
+                        }}
+                        key={item.name}
+                    >
+                        {item.content}
+                    </motion.li>
+                ))}
+            </ol>
+        </div>
     </section>
 };
 

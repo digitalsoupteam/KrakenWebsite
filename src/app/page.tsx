@@ -3,7 +3,7 @@
 import React, {FC} from 'react';
 
 import {About, Ecosystem, EcosystemCta, Hero, Roadmap, Subscription, Tags, Tokenomics} from "@/components/home";
-import {Partners} from "@/components/common";
+// import {Partners} from "@/components/common";
 
 const Home: FC = () => {
     return (
@@ -18,7 +18,7 @@ const Home: FC = () => {
 
             <Ecosystem/>
 
-            <Partners/>
+            {/*<Partners/>*/}
 
             <Roadmap/>
 
