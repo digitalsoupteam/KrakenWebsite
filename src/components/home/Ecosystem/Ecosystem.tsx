@@ -99,7 +99,7 @@ const Ecosystem:FC = () => {
                         >
                             {items && items.length > 0 && items.map((item) => (
                                 <SwiperSlide className={styles.slide} key={item.title}>
-                                    <TextCard title={item.title} text={item.text} key={item.title}/>
+                                    <TextCard title={item.title} text={item.text}/>
                                 </SwiperSlide>
                             ))}
                             <SwiperNavigation swiperRef={swiperRef}/>
