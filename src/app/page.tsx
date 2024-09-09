@@ -2,7 +2,7 @@
 
 import React, {FC} from 'react';
 
-import {About, Ecosystem, EcosystemCta, Hero, Roadmap, Subscription, Tags} from "@/components/home";
+import {About, Ecosystem, EcosystemCta, Faq, Hero, Roadmap, Subscription, Tags} from "@/components/home";
 
 const Home: FC = () => {
     return (
@@ -20,6 +20,8 @@ const Home: FC = () => {
             <Roadmap/>
 
             <Subscription/>
+
+            <Faq/>
         </>
     );
 }
