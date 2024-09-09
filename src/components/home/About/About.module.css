@@ -1,4 +1,6 @@
-.root {}
+.root {
+    overflow: hidden;
+}
 
 .textContainer {
     margin-bottom: 45px;
@@ -85,7 +87,6 @@
 
     @media screen and (min-width: 768px) {
         width: 637px;
-
     }
 }
 
