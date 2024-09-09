@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: -100px;
 
     &::before,
     &::after {
@@ -31,6 +32,10 @@
         @media screen and (min-width: 768px) {
             height: 334px;
         }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
     }
 }
 
