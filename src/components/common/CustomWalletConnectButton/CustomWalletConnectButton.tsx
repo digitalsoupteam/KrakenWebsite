@@ -13,9 +13,10 @@ import styles from './CustomWalletConnectButton.module.css';
 
 interface CustomWalletConnectButtonProps {
     className: string;
+    isSmall?: boolean;
 }
 
-const CustomWalletConnectButton: FC<CustomWalletConnectButtonProps> = ({className}) => {
+const CustomWalletConnectButton: FC<CustomWalletConnectButtonProps> = ({className, isSmall}) => {
     const [walletModalConfig, setWalletModalConfig] = useState<Readonly<{
         onSelectWallet(walletName: WalletName): void;
         wallets: Wallet[];
@@ -67,7 +68,7 @@ const CustomWalletConnectButton: FC<CustomWalletConnectButtonProps> = ({classNam
     }, [buttonState, onDisconnect, onConnect, onSelectWallet]);
 
     return (
-        <div className={clsx(styles.root, className)}>
+        <div className={clsx(styles.root, className, isSmall && styles.small)}>
             <WalletMultiButton>
                 {buttonState === 'no-wallet' && <LoginIcon/>} {label}
             </WalletMultiButton>

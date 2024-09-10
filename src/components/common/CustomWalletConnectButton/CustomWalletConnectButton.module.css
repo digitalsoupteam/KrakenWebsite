@@ -12,7 +12,7 @@
     color: var(--white);
     font-size: 20px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 120%;
     transition: var(--tr-default);
     height: fit-content;
 
@@ -35,4 +35,8 @@
             }
         }
     }
+}
+
+.root.small button {
+    padding: 0;
 }

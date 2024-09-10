@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
-import {CustomWalletConnectButton} from "@/components/common";
+import {CustomWalletConnectButton, LangSwitcher} from "@/components/common";
 
 import styles from './Header.module.css';
 
@@ -40,6 +40,8 @@ const Header: FC = () => {
                     <Image className={styles.logoImage} src="/images/logo.png" width="246" height="40" alt={""}/>
                 </Link>
 
+                <LangSwitcher className={styles.langSwitcher}/>
+
                 <Button className={clsx(styles.burgerButton, isMenuOpened && styles.burgerButtonActive)}
                         onClick={() => setIsMenuOpened(!isMenuOpened)}>
                     <span></span>
@@ -55,9 +57,12 @@ const Header: FC = () => {
                             </Link>
                         </li>
                     ))}
+                    <li>
+                        <CustomWalletConnectButton className={styles.loginMobile} isSmall={true}/>
+                    </li>
                 </ul>
 
-                <CustomWalletConnectButton className={styles.login} />
+                <CustomWalletConnectButton className={styles.login}/>
             </div>
         </Wrapper>
     </header>
