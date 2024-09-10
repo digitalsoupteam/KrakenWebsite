@@ -1,22 +1,23 @@
 'use client';
 
 import React, {FC, useState} from 'react';
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import clsx from "clsx";
+import { useTranslation } from 'react-i18next';
 
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
 import {CustomWalletConnectButton, LangSwitcher} from "@/components/common";
-
 import styles from './Header.module.css';
 
 
 const Header: FC = () => {
+    const { t } = useTranslation();
     const [isMenuOpened, setIsMenuOpened] = useState(false);
     const menuItems = [
         {
-            name: 'About',
+            name: t('menu:about'),
             link: '/#about',
         },
         {

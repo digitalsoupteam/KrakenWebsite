@@ -1,2 +1,11 @@
 .root {
+    color: var(--light)
+}
+
+.item {
+    transition: var(--tr-default);
+}
+
+.activeItem {
+    color: var(--white);
 }

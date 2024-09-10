@@ -1,5 +1,4 @@
 'use client';
-
 import React, {FC} from 'react';
 
 import {About, Ecosystem, EcosystemCta, Faq, Hero, Roadmap, Subscription, Tags} from "@/components/home";

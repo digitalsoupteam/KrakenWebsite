@@ -4,7 +4,7 @@ import type {Metadata} from "next";
 import {Geologica} from 'next/font/google'
 import localFont from 'next/font/local';
 
-import AppWalletProvider from "@/providers/AppWalletProvider";
+import {AppWalletProvider, I18nProvider} from "@/providers";
 import {Footer, Header} from "@/components/layout";
 
 import "./globals.css";
@@ -49,13 +49,15 @@ const RootLayout: FC<PropsWithChildren> = ({children}) => {
     return (
         <html lang="en">
         <body className={clsx(BebasNeue.className, GeologicaFont.variable, DarkHornetItalic.variable)}>
-        <AppWalletProvider>
-            <Header/>
-            <main>
-                {children}
-            </main>
-            <Footer/>
-        </AppWalletProvider>
+        <I18nProvider>
+            <AppWalletProvider>
+                <Header/>
+                <main>
+                    {children}
+                </main>
+                <Footer/>
+            </AppWalletProvider>
+        </I18nProvider>
         </body>
         </html>
     );
