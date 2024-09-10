@@ -1,7 +1,7 @@
 import menuEN from './en-menu.json';
 import menuRU from './ru-menu.json';
 
-export const resources = {
+const resources = {
     ru: {
         menu: menuRU,
     },
