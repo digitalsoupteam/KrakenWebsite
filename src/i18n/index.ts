@@ -35,6 +35,8 @@ i18next
         },
     });
 
-document.documentElement.lang = i18next.language;
+if (typeof window !== 'undefined') {
+    document.documentElement.lang = i18next.language;
+}
 
 export default i18next;
