@@ -30,7 +30,7 @@ const Roadmap: FC = () => {
         }
     ];
 
-    return <section className={styles.root}>
+    return <section className={styles.root} id="roadmap">
         <FadeOut>
             <Title className={styles.title} size={'medium'} isNoShadow={true} as={'h2'}>KRAKEN Roadmap</Title>
         </FadeOut>

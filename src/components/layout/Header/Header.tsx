@@ -22,7 +22,7 @@ const Header: FC = () => {
         },
         {
             name: t('menu:ecosystem'),
-            link: '/#tokenomics',
+            link: '/#ecosystem',
         },
         {
             name: t('menu:roadmap'),

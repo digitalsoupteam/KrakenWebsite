@@ -64,7 +64,7 @@
     }
 }
 
-.branding {
+.root .branding {
     order: -1;
     display: flex;
     flex-direction: column;
@@ -98,14 +98,12 @@
     }
 }
 
-.nav:first-of-type .navList {
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    .nav:first-of-type .navList {
         align-items: flex-start;
     }
-}
 
-.nav:last-of-type .navList {
-    @media screen and (min-width: 768px) {
+    .nav:last-of-type .navList {
         align-items: flex-end;
     }
 }

@@ -70,7 +70,7 @@ const Ecosystem: FC = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    return <section className={styles.root}>
+    return <section className={styles.root} id="ecosystem">
         <Wrapper>
             <div className={styles.inner}>
                 <FadeOut>
