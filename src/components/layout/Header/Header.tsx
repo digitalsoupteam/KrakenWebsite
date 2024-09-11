@@ -53,7 +53,7 @@ const Header: FC = () => {
                 <ul className={clsx(styles.menu, isMenuOpened && styles.menuOpened)}>
                     {menuItems && menuItems.length && menuItems.map(menuItem => (
                         <li key={menuItem.name}>
-                            <Link className={styles.menuLink} href={menuItem.link}>
+                            <Link className={styles.menuLink} href={menuItem.link} onClick={() => setIsMenuOpened(false)}>
                                 {menuItem.name}
                             </Link>
                         </li>
