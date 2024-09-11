@@ -6,36 +6,36 @@
     background-position: center;
     margin-bottom: -100px;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        left: 0;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-    }
-
-    &::before {
-        top: 0;
-        height: 220px;
-
-        @media screen and (min-width: 768px) {
-            height: 575px;
-        }
-    }
-
-    &::after {
-        bottom: 0;
-        height: 113px;
-        transform: rotate(180deg);
-
-        @media screen and (min-width: 768px) {
-            height: 334px;
-        }
-    }
-
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
+    }
+}
+
+.root::before,
+.root::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+
+.root::before {
+    top: -1px;
+    height: 220px;
+
+    @media screen and (min-width: 768px) {
+        height: 575px;
+    }
+}
+
+.root::after {
+    bottom: 0;
+    height: 113px;
+    transform: rotate(180deg);
+
+    @media screen and (min-width: 768px) {
+        height: 334px;
     }
 }
 

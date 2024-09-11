@@ -6,28 +6,28 @@
     background-position: top left;
     overflow: hidden;
 
-    &::after,
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 334px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-    }
-
-    &:before {
-        top: 0;
-    }
-
-    &::after {
-        transform: rotate(180deg);
-        bottom: 0;
-    }
-
     @media screen and (min-width: 768px) {
         /*background-position: top 140px center;*/
     }
+}
+
+.root::after,
+.root::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 334px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+
+.root::before {
+    top: 0;
+}
+
+.root::after {
+    transform: rotate(180deg);
+    bottom: 0;
 }
 
 .inner {

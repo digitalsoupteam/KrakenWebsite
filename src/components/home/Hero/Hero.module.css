@@ -5,26 +5,6 @@
     background-size: cover;
     padding-top: 100px;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 232px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 232px;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-    }
-
     @media screen and (min-width: 768px) {
         background-image: url('/images/hero-bg.png');
         padding-top: 177px;
@@ -33,6 +13,26 @@
     @media screen and (min-width: 1024px) {
         padding-bottom: 180px;
     }
+}
+
+.root::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 232px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+
+.root::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 232px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
 }
 
 .inner {

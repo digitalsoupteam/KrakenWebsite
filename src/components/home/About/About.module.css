@@ -36,29 +36,29 @@
     background-position: center;
     background-size: cover;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        background: linear-gradient(0, rgba(0, 0, 0, 0) 0%, #000 100%);
-        height: 334px;
-    }
-
-    &::before {
-        top: 0;
-    }
-
-    &::after {
-        bottom: 0;
-        transform: rotate(-180deg);
-    }
-
     @media screen and (min-width: 768px) {
         flex-direction: row;
         padding: 80px 0;
     }
+}
+
+.projects::before,
+.projects::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0, rgba(0, 0, 0, 0) 0%, #000 100%);
+    height: 334px;
+}
+
+.projects::before {
+    top: 0;
+}
+
+.projects::after {
+    bottom: 0;
+    transform: rotate(-180deg);
 }
 
 .projectsLeft,
