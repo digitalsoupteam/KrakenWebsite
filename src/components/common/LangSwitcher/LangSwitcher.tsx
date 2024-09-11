@@ -27,10 +27,10 @@ const LangSwitcher: FC<LangSwitcherProps> = ({className}) => {
 
     return <Button className={clsx(styles.root, className)} onClick={switchToNextLanguage}>
         {filteredLanguages.length > 0 && filteredLanguages.map((lang, index) => (
-            <>
-                <span className={clsx(styles.item, currentLanguage === lang && styles.activeItem)} key={lang}>{lang}</span>
+            <React.Fragment key={lang}>
+                <span className={clsx(styles.item, currentLanguage === lang && styles.activeItem)}>{lang}</span>
                 {index !== currentLanguage.length - 1 && <span>/</span>}
-            </>
+            </React.Fragment>
         ))}
     </Button>
 };
