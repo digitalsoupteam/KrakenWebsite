@@ -1,0 +1,40 @@
+{
+  "titleCta": "Ecosystem purpose",
+  "textCta": "We are creating a single hub, a “bridge” between Web2 and Web3, where everyone can enter the world of cryptocurrencies. Someone will be able to have an interesting time, and someone else will be able to earn money.",
+  "titleDescription": "Kraken ecosystem",
+  "textDescription": "Our ecosystem is akin to the kraken tentacles that envelop the Web3 world. Whether you're a newbie or someone who has been through 3 bear cycles, you'll find something to do in our ecosystem. We are blurring the borders between Web2 and Web3. So why not be part of the big ecosystem and grow together?",
+  "itemsDescription": {
+    "token": {
+      "title": "$KRAKEN token",
+      "text": "The main utility token of the entire ecosystem on Solana. The entire ecosystem is built around it. Buy NFT, play games, solve puzzles, put your coins in staking, do crowdfunding on our lunchpad. By owning our token you get all of this. You can donate your coins to our charity fund, the funds will be donated to environmental and ocean protection organizations.   "
+    },
+    "tte-game": {
+      "title": "KRAKEN tap-to-earn game",
+      "text": "Our mini-app Telegram game that can offer you the best referral program on the market. Play, earn points, conquer the tops and invite your friends. But that's not all: soon we will announce something interesting and unusual. TAP-TO-EARN hasn't seen it yet, so don't miss your chance to become a part of our friendly community."
+    },
+    "geocaching": {
+      "title": "KRAKEN Geocaching",
+      "text": "Geocaching is a unique adventure game of the Kraken Project for finding treasure caches scattered in different countries of the world.\nIn order to get a valuable prize, players need to solve riddles and puzzles, as well as find certain locations with hidden “treasures” in them. Secret locations are mostly scattered in places of historical, natural, cultural or geographical interest."
+    },
+    "game-v2": {
+      "title": "Game Release the kraken",
+      "text": "In development. Something interesting coming up."
+    },
+    "nft": {
+      "title": "$KRAKEN NFT",
+      "text": "A collection of 444 NFTs, each one unique."
+    },
+    "staking": {
+      "title": "$KRAKEN Staking",
+      "text": "The $KRAKEN token staking platform where you can increase your % of tokens from APY to .... %"
+    },
+    "launchpad": {
+      "title": "KRAKEN Launchpad",
+      "text": "In development. Our own platform for launching crypto-startups, where we will help all worthy projects to come out, and you in turn - to earn from them."
+    },
+    "charity": {
+      "title": "KRAKEN Charity",
+      "text": "People, animals, birds, fish, insects and our other lesser brothers, we all live in a beautiful world, but as unfortunate as it may sound: because of human activity the world ocean, flora and fauna suffer. We are not indifferent, that's why we have created a charity fund, donations will be directed to environmental protection organizations and protection of the world ocean. Let's help nature together"
+    }
+  }
+}

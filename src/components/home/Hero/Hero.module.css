@@ -42,7 +42,8 @@
 
     @media screen and (min-width: 1024px) {
         display: grid;
-        grid-template-columns: 530px 1fr;
+        /*grid-template-columns: 530px 1fr;*/
+        grid-template-columns: 585px 1fr;
         gap: 120px;
     }
 }

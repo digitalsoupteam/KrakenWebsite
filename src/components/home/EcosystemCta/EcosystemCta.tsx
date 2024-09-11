@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Button, Text, Title} from "@/components/ui";
@@ -7,15 +8,17 @@ import {Socials} from "@/components/common";
 import styles from './EcosystemCta.module.css';
 
 const EcosystemCta:FC = () => {
+    const {t} = useTranslation();
+
     return <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <Title className={styles.title} size={'medium'} isNoShadow={true}>Цель экосистемы</Title>
+                <Title className={styles.title} size={'medium'} isNoShadow={true}>{t("ecosystem:titleCta")}</Title>
 
-                <Text className={styles.text} size={'medium'}>Мы создаем единый хаб, “мост” между Web2 и Web3, где каждый некриптан сможет войти в мир крипты через понятные простые квесты, а криптаны – заработать на росте экосистемы.</Text>
+                <Text className={styles.text} size={'medium'}>{t('ecosystem:textCta')}</Text>
 
                 <div className={styles.buttons}>
-                    <Button className={styles.button} locked={true} disabled={true}>Buy kraken</Button>
+                    <Button className={styles.button} locked={true} disabled={true}>{t('common:buy')}</Button>
                     <Socials/>
                 </div>
             </div>

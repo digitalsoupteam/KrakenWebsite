@@ -4,45 +4,46 @@ import React, {FC} from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
-import {Button} from "@/components/ui";
-import TelegramIcon from '/public/images/telegram.svg';
-
-import styles from './Footre.module.css';
 import {Socials} from "@/components/common";
 
+import styles from './Footre.module.css';
+
 const Footer: FC = () => {
+    const {t} = useTranslation();
+
     const primaryNav = [
         {
-            name: 'About KRAKEN',
+            name: t('footer:about'),
             link: '/#about',
         },
         {
-            name: 'Buy $KRAKEN',
+            name: t('footer:buy'),
             link: '/#',
         },
         {
-            name: 'WhitePaper',
+            name: t('footer:white-paper'),
             link: '/#',
         },
         {
-            name: 'Реферальная программа',
+            name: t('footer:referrals'),
             link: '/#',
         },
     ];
 
     const secondaryNav = [
         {
-            name: 'Media Kit',
+            name: t('footer:media-kit'),
             link: '/#',
         },
         {
-            name: 'Privacy Policy',
+            name: t('footer:privacy'),
             link: '/#',
         },
         {
-            name: 'Terms and Condition',
+            name: t('footer:tos'),
             link: '/#',
         },
     ];

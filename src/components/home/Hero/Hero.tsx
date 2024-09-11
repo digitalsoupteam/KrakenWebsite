@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import Image from "next/image";
 import {motion} from 'framer-motion';
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Button, Text, Title} from "@/components/ui";
@@ -9,7 +10,9 @@ import {Socials} from "@/components/common";
 import styles from './Hero.module.css';
 
 const Hero: FC = () => {
-    return <section className={styles.root}>
+    const {t} = useTranslation();
+
+    let section = <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
                 <div className={styles.heroImage}>
@@ -22,22 +25,19 @@ const Hero: FC = () => {
                 </div>
 
                 <div className={styles.content}>
-                    <Title className={styles.title} size={'large'} isNoShadow={true}>Мы – Kraken ecosystem</Title>
-                    <Text className={styles.text} size={'big'}>
-                        Ваш мост между реальным миром и Web3. Выполняйте геокэшинг задания в реальном мире, стейкайте
-                        токен,
-                        холдите NFT, тапайте в игре и зарабатывайте
-                    </Text>
+                    <Title className={styles.title} size={'large'} isNoShadow={true}>{t('hero:title')}</Title>
+                    <Text className={styles.text} size={'big'}>{t('hero:text')}</Text>
                     <div className={styles.buttons}>
                         <Button className={styles.buy} isLight={true} disabled={true} locked={true}>
-                            Buy kraken
+                            {t('common:buy')}
                         </Button>
                         <Socials/>
                     </div>
                 </div>
             </div>
         </Wrapper>
-    </section>
+    </section>;
+    return section
 };
 
 export default Hero;

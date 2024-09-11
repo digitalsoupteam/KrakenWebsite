@@ -1,18 +1,21 @@
 import React, {FC} from 'react';
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
-import {Button, Text, Title} from "@/components/ui";
+import {Text, Title} from "@/components/ui";
 import {Socials} from "@/components/common";
 
 import styles from './Subscription.module.css';
 
 const Subscription:FC = () => {
+    const {t} = useTranslation();
+
     return <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <Title className={styles.title} size={'medium'} isNoShadow={true}>Узнавай новости первым</Title>
+                <Title className={styles.title} size={'medium'} isNoShadow={true}>{t('subscription:title')}</Title>
 
-                <Text className={styles.text} size={'medium'}>Подписывайся на наши соц. сети <br/>и не пропусти выход нашей экосистемы</Text>
+                <Text className={styles.text} size={'medium'}>{t('subscription:text')}</Text>
 
                 <div className={styles.buttons}>
                     <Socials/>

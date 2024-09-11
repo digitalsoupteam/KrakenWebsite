@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import Image from "next/image";
-import clsx from "clsx";
 import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Button, Text, Title} from "@/components/ui";
@@ -10,44 +10,46 @@ import ArrowIcon from '/public/images/arrow.svg';
 import styles from './About.module.css';
 
 const About: FC = () => {
+    const {t} = useTranslation();
+
     const itemsLeft = [
         {
-            name: 'Лаунчпад для запуска проектов',
+            name: t('about:launchpad'),
         },
         {
-            name: 'Игра Release the kraken',
+            name: t('about:game-v2'),
         },
         {
-            name: 'Игра TAP–TO–EARN',
+            name: t('about:tap-to-earn'),
             link: 'https://t.me/kraken_tap_to_earn_bot/kraken_tap_to_earn'
         },
         {
-            name: 'Стейкинг',
+            name: t('about:staking'),
             link: '/staking/'
         }
     ];
 
     const itemsRight = [
         {
-            name: 'Utility – токен',
+            name: t('about:token'),
             link: '#'
         },
         {
-            name: 'Квесты и геокэшинг ',
+            name: t('about:geocaching'),
         },
         {
-            name: 'Редкие NFT',
+            name: t('about:nft'),
         },
         {
-            name: 'Благотворительность',
+            name: t('about:сharity'),
         }
     ];
 
     return <section className={styles.root} id="about">
             <div className={styles.textContainer}>
                 <Wrapper>
-                    <Title className={styles.title} size={'big'} isNoShadow={true} as={'h2'}>What is kraken?</Title>
-                    <Text className={styles.text} size={'medium'}>KRAKEN – это большая экосистема на SOL, цель которой – привлечь как можно больше криптанов/людей/проектов из Web2, показать им как пользоваться экосистемой. Каждый сможет найти для себя utility на платформе:</Text>
+                    <Title className={styles.title} size={'big'} isNoShadow={true} as={'h2'}>{t('about:title')}</Title>
+                    <Text className={styles.text} size={'medium'}>{t('about:text')}</Text>
                 </Wrapper>
             </div>
 

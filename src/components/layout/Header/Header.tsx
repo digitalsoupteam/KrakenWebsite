@@ -9,8 +9,8 @@ import { useTranslation } from 'react-i18next';
 import {Wrapper} from "@/components/layout";
 import {Button} from "@/components/ui";
 import {CustomWalletConnectButton, LangSwitcher} from "@/components/common";
-import styles from './Header.module.css';
 
+import styles from './Header.module.css';
 
 const Header: FC = () => {
     const { t } = useTranslation();
@@ -21,15 +21,15 @@ const Header: FC = () => {
             link: '/#about',
         },
         {
-            name: 'Tokenomics',
+            name: t('menu:ecosystem'),
             link: '/#tokenomics',
         },
         {
-            name: 'Nft',
-            link: '#',
+            name: t('menu:roadmap'),
+            link: '/#roadmap',
         },
         {
-            name: 'Stake',
+            name: t('menu:staking'),
             link: '/staking/',
         },
     ];

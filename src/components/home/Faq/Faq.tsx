@@ -4,33 +4,35 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Title} from "@/components/ui";
-
-
-import styles from './Faq.module.css';
 import {SwiperNavigation, TextCard} from "@/components/common";
 
+import styles from './Faq.module.css';
+
 const Faq: FC = () => {
+    const {t} = useTranslation();
+
     const [isWide, setIsWide] = useState(false);
     const swiperRef = useRef<SwiperType | null>(null);
     const items = [
         {
-            title: 'What is KRAKEN Ecosystem?',
-            text: 'RELEASE KRAKEN is an innovative crypto project that combines elements of GameFi, staking, geocaching, and donations to wildlife charity funds to create an engaging and rewarding experience for its users. RELEASE KRAKEN aims to empower SOLANA community and attract users from Web2 to Web3.',
+            title: t('faq:items:about:title'),
+            text: t('faq:items:about:text'),
         },
         {
-            title: 'How does geocaching work?',
-            text: 'RELEASE KRAKEN is an innovative crypto project that combines elements of GameFi, staking, geocaching, and donations to wildlife charity funds to create an engaging and rewarding experience for its users. RELEASE KRAKEN aims to empower SOLANA community and attract users from Web2 to Web3.',
+            title: t('faq:items:how-geocaching:title'),
+            text: t('faq:items:how-geocaching:text'),
         },
         {
-            title: 'Is Kraken safe?',
-            text: 'RELEASE KRAKEN is an innovative crypto project that combines elements of GameFi, staking, geocaching, and donations to wildlife charity funds to create an engaging and rewarding experience for its users. RELEASE KRAKEN aims to empower SOLANA community and attract users from Web2 to Web3.',
+            title: t('faq:items:how-stake:title'),
+            text: t('faq:items:how-stake:text'),
         },
         {
-            title: 'How to stake Kraken?',
-            text: 'RELEASE KRAKEN is an innovative crypto project that combines elements of GameFi, staking, geocaching, and donations to wildlife charity funds to create an engaging and rewarding experience for its users. RELEASE KRAKEN aims to empower SOLANA community and attract users from Web2 to Web3.',
+            title: t('faq:items:safety:title'),
+            text: t('faq:items:safety:text'),
         },
     ];
 
@@ -51,7 +53,7 @@ const Faq: FC = () => {
     return <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <Title className={styles.title} size={'medium'} isNoShadow={true}>Частые вопросы</Title>
+                <Title className={styles.title} size={'medium'} isNoShadow={true}>{t('faq:title')}</Title>
 
                 {
                     isWide &&

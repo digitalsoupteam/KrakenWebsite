@@ -49,6 +49,7 @@
     border-radius: 4vw;
     font-size: 3.5vw;
     width: 46vw;
+    white-space: pre-wrap;
 
     @media screen and (min-width: 768px) {
         padding: 20px;

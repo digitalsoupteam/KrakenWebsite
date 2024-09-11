@@ -1,54 +1,57 @@
 'use client';
 
 import React, {FC, useState, useEffect, useRef} from 'react';
+import Image from "next/image";
 import { Swiper as SwiperType } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Title, Text} from "@/components/ui";
 import {SwiperNavigation, TextCard} from "@/components/common";
 
 import styles from './Ecosystem.module.css';
-import Image from "next/image";
 
 const Ecosystem:FC = () => {
+    const {t} = useTranslation();
+
     const [isWide, setIsWide] = useState(false);
     const swiperRef = useRef<SwiperType | null>(null);
     const items = [
         {
-            title: '$KRAKEN token',
-            text: 'Основной utility-токен всей экосистемы на Solana. Вся работа экосистемы построена вокруг него. Покупайте NFT, играйте в геокэшинг, стейкайте токен, участвуйте в лаунчпаде и благотворите с помощью токена $KRAKEN.',
+            title: t('ecosystem:itemsDescription:token:title'),
+            text: t('ecosystem:itemsDescription:token:text'),
         },
         {
-            title: 'KRAKEN tap-to-earn game',
-            text: 'Наша флагманская игра, mini-app в Telegram. Лучшая реферальная программа на рынке. Приглашайте друзей, играйте, зарабатывайте поинты. Скоро мы анонсируем кое-что большое, поэтому не упускайте шанс, как с другими тапалками.',
+            title: t('ecosystem:itemsDescription:tte-game:title'),
+            text: t('ecosystem:itemsDescription:tte-game:text'),
         },
         {
-            title: 'KRAKEN Geocaching',
-            text: 'Наша платформа для геокэшинга, мост между Web2 и Web3. Pokemon Go – прошлый век, поэтому мы объединили реальный мир и технологии Web3, чтобы вы могли выполнять реальные задания, искать тайники и зарабатывать на этом.',
+            title: t('ecosystem:itemsDescription:geocaching:title'),
+            text: t('ecosystem:itemsDescription:geocaching:text'),
         },
         {
-            title: 'игра release the kraken',
-            text: 'Описание описание описание  описание описание описание описание описание  описание описание описание описание описание  описание описание описание ',
+            title: t('ecosystem:itemsDescription:game-v2:title'),
+            text: t('ecosystem:itemsDescription:game-v2:text'),
         },
         {
-            title: '$KRAKEN NFT',
-            text: 'Коллекция из 444 редких NFT, которые позволят вам зарабатывать токены KRAKEN и играть в наши игры.',
+            title: t('ecosystem:itemsDescription:nft:title'),
+            text: t('ecosystem:itemsDescription:nft:text'),
         },
         {
-            title: '$KRAKEN Staking',
-            text: 'Платформа для стейкинга токенов $KRAKEN, где вы можете увеличивать свой % токенов с APY до …. %',
+            title: t('ecosystem:itemsDescription:staking:title'),
+            text: t('ecosystem:itemsDescription:staking:text'),
         },
         {
-            title: 'KRAKEN Launchpad',
-            text: 'В разработке. Наша собственная площадка для запуска крипто–проектов, где каждый проект может выйти с помощью нашего большого комьюнити, а вы – заработать на ранней инвестиции.',
+            title: t('ecosystem:itemsDescription:launchpad:title'),
+            text: t('ecosystem:itemsDescription:launchpad:text'),
         },
         {
-            title: 'KRAKEN Charity',
-            text: 'Вмире сейчас огромная проблема загрязнения воды и мирового океана. Наша глобальная миссия –  благотворительность и очищение мирового океана. Часть средств от сбора комьюнити направлены на благотворительность. Люди, которые покупают токен, приносят реальную пользу миру, элементы RWA.',
+            title: t('ecosystem:itemsDescription:charity:title'),
+            text: t('ecosystem:itemsDescription:charity:text'),
         }
     ];
 
@@ -69,11 +72,8 @@ const Ecosystem:FC = () => {
     return <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <Title className={styles.title} size={'medium'} as={'h2'} isNoShadow={true}>Kraken ecosystem</Title>
-                <Text className={styles.text} size={'medium'}>Наша экосистема – щупальца кракена, которая захватывает
-                    мир Web3. Не важно, новичок вы или криптан, прошедший 3 медвежих цикла, вы найдете для себя
-                    интересное занятие в экосистеме. KRAKEN стирает границы между Web2 и Web3 – почему бы не стать
-                    частью большой экосистемы и расти вместе?</Text>
+                <Title className={styles.title} size={'medium'} as={'h2'} isNoShadow={true}>{t('ecosystem:titleDescription')}</Title>
+                <Text className={styles.text} size={'medium'}>{t('ecosystem:textDescription')}</Text>
 
                 {
                     isWide &&

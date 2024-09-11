@@ -1,41 +1,31 @@
 import React, {FC} from 'react';
-import {motion} from "framer-motion";
 import Image from "next/image";
+import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
 
-import styles from './Roadmap.module.css';
 import {Title} from "@/components/ui";
 
+import styles from './Roadmap.module.css';
+
 const Roadmap: FC = () => {
+    const {t} = useTranslation();
+
     const items = [
         {
             name: 'listing DEX',
-            content: <>
-                Listing on DEX <br/>
-                The first stage of $KRAKEN. Listing on Solana ecosystem DEX (Raydium, Jupiter).
-            </>,
+            content: t('roadmap:dex'),
         },
         {
             name: 'Nft minting',
-            content: <>
-                NFT minting <br/>
-                Building 444 unique NFTs. Minting RELEASE THE KRAKEN collection. Listing collection on Magic Eden.
-            </>,
+            content: t('roadmap:nft'),
         },
         {
             name: 'Geocaching',
-            content: <>
-                Geocaching platform and $KRAKEN fund.
-                Building $KRAKEN Geocaching WEB3 platform. Launch the platform and start geocaching all over the
-                world.
-                Launch $KRAKEN charity fund for the protection of World’s Ocean.
-            </>,
+            content: t('roadmap:geocaching'),
         },
         {
             name: 'listing CEX',
-            content: <>
-                Listing on CEX <br/>
-                Listing RELEASE KRAKEN on CEX
-            </>
+            content: t('roadmap:cex'),
         }
     ];
 

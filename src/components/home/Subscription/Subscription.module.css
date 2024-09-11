@@ -29,6 +29,7 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto 24px;
+    white-space: pre-wrap;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
