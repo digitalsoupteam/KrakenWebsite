@@ -98,6 +98,7 @@
 
 .button {
     font-family: var(--geologica);
+    font-size: 16px;
     font-weight: 300;
     padding: 15px 20px;
     width: fit-content;
@@ -106,5 +107,9 @@
     & svg {
         width: 24px;
         height: 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
     }
 }

@@ -78,7 +78,7 @@ const About: FC = () => {
                         ease: 'easeInOut',
                     }}
                     variants={{
-                        hidden: {x: '100%', y: '-100%', scale: 0},
+                        hidden: {x: '40%', y: '-100%', scale: 0},
                         visible: {x: 0, y: '-50%', scale: 1},
                     }}
                 >

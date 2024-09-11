@@ -23,14 +23,6 @@
         background-color: var(--primary);
     }
 
-    &:disabled {
-        color: var(--light);
-        border: 1px solid var(--light);
-        background-color: var(--secondary);
-    }
-
-
-
     @media (hover: hover) {
         &:hover:not(:disabled),
         &:focus:not(:disabled) {
@@ -41,6 +33,12 @@
             }
         }
     }
+}
+
+.root:disabled {
+    color: var(--light);
+    border: 1px solid var(--light);
+    background-color: var(--secondary);
 }
 
 .light {
