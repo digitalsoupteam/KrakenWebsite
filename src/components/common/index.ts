@@ -10,6 +10,8 @@ import Rewards from './Rewards/Rewards';
 import TextCard from "./TextCard/TextCard";
 import SwiperNavigation from "./SwiperNavigation/SwiperNavigation";
 import LangSwitcher from "./LangSwitcher/LangSwitcher";
+import SlideIn from './SlideIn/SlideIn';
+import FadeOut from './FadeOut/FadeOut';
 
 export {
     Staking,
@@ -23,5 +25,7 @@ export {
     Rewards,
     TextCard,
     SwiperNavigation,
-    LangSwitcher
+    LangSwitcher,
+    SlideIn,
+    FadeOut
 };

@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Title} from "@/components/ui";
-import {SwiperNavigation, TextCard} from "@/components/common";
+import {FadeOut, SwiperNavigation, TextCard} from "@/components/common";
 
 import styles from './Faq.module.css';
 
@@ -53,7 +53,9 @@ const Faq: FC = () => {
     return <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <Title className={styles.title} size={'medium'} isNoShadow={true}>{t('faq:title')}</Title>
+                <FadeOut>
+                    <Title className={styles.title} size={'medium'} isNoShadow={true}>{t('faq:title')}</Title>
+                </FadeOut>
 
                 {
                     isWide &&

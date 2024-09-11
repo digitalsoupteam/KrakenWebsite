@@ -2,20 +2,21 @@
 
 import React, {FC, useState, useEffect, useRef} from 'react';
 import Image from "next/image";
-import { Swiper as SwiperType } from 'swiper';
+import {Swiper as SwiperType} from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import {useTranslation} from "react-i18next";
+import {motion} from 'framer-motion';
 
 import {Wrapper} from "@/components/layout";
 import {Title, Text} from "@/components/ui";
-import {SwiperNavigation, TextCard} from "@/components/common";
+import {FadeOut, SwiperNavigation, TextCard} from "@/components/common";
 
 import styles from './Ecosystem.module.css';
 
-const Ecosystem:FC = () => {
+const Ecosystem: FC = () => {
     const {t} = useTranslation();
 
     const [isWide, setIsWide] = useState(false);
@@ -72,53 +73,92 @@ const Ecosystem:FC = () => {
     return <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <Title className={styles.title} size={'medium'} as={'h2'} isNoShadow={true}>{t('ecosystem:titleDescription')}</Title>
-                <Text className={styles.text} size={'medium'}>{t('ecosystem:textDescription')}</Text>
+                <FadeOut>
+                    <Title className={styles.title} size={'medium'} as={'h2'}
+                           isNoShadow={true}>{t('ecosystem:titleDescription')}</Title>
+                    <Text className={styles.text} size={'medium'}>{t('ecosystem:textDescription')}</Text>
+                </FadeOut>
 
                 {
                     isWide &&
-                        <div className={styles.items}>
-                            {items && items.length > 0 && items.map((item) => (
+                    <div className={styles.items}>
+                        {items && items.length > 0 && items.map((item, index) => (
                             <TextCard title={item.title} text={item.text} key={item.title}/>
-                            ))}
-                        </div>
+                        ))}
+                    </div>
                 }
 
                 {
                     !isWide &&
-                        <Swiper
-                            className={styles.itemsSwiper}
-                            onBeforeInit={(swiper) => swiperRef.current = swiper}
-                            spaceBetween={20}
-                            autoplay={{
-                                delay: 5000,
-                                disableOnInteraction: true,
-                            }}
-                            modules={[Autoplay]}
-                            loop={true}
-                        >
-                            {items && items.length > 0 && items.map((item) => (
-                                <SwiperSlide className={styles.slide} key={item.title}>
-                                    <TextCard title={item.title} text={item.text}/>
-                                </SwiperSlide>
-                            ))}
-                            <SwiperNavigation swiperRef={swiperRef}/>
-                        </Swiper>
+                    <Swiper
+                        className={styles.itemsSwiper}
+                        onBeforeInit={(swiper) => swiperRef.current = swiper}
+                        spaceBetween={20}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }}
+                        modules={[Autoplay]}
+                        loop={true}
+                    >
+                        {items && items.length > 0 && items.map((item) => (
+                            <SwiperSlide className={styles.slide} key={item.title}>
+                                <TextCard title={item.title} text={item.text}/>
+                            </SwiperSlide>
+                        ))}
+                        <SwiperNavigation swiperRef={swiperRef}/>
+                    </Swiper>
                 }
             </div>
 
             <div className={styles.background}>
-                <div className={styles.tentacleTopLeft}>
+                <motion.div
+                    className={styles.tentacleTopLeft}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                        duration: 0.8,
+                        ease: 'easeInOut',
+                    }}
+                    variants={{
+                        hidden: {x: '-90%', y: '50%', rotate: 45},
+                        visible: {x: 0, y: 0, rotate: 0},
+                    }}
+                >
                     <Image src={'/images/about-tentacle-1.png'} width={'454'} height={'549'} alt=""/>
-                </div>
+                </motion.div>
 
-                <div className={styles.tentacleTopRight}>
+                <motion.div
+                    className={styles.tentacleTopRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                        duration: 0.8,
+                        ease: 'easeInOut',
+                    }}
+                    variants={{
+                        hidden: {x: '90%', y: '50%', rotate: 45},
+                        visible: {x: 0, y: 0, rotate: 0},
+                    }}
+                >
                     <Image src={'/images/about-tentacle-2.png'} width={'208'} height={'445'} alt=""/>
-                </div>
+                </motion.div>
 
-                <div className={styles.ship}>
+                <motion.div
+                    className={styles.ship}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                        duration: 1.2,
+                        ease: 'easeInOut',
+                    }}
+                    variants={{
+                        hidden: {x: '50%', y: '-30%', scale: 0.5},
+                        visible: {x: 0, y: 0, scale: 1},
+                    }}
+                >
                     <Image src={'/images/ship-map.png'} width={'360'} height={'250'} alt=""/>
-                </div>
+                </motion.div>
             </div>
         </Wrapper>
     </section>

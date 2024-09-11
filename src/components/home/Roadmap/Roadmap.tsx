@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import {useTranslation} from "react-i18next";
 
 import {Title} from "@/components/ui";
+import {FadeOut} from "@/components/common";
 
 import styles from './Roadmap.module.css';
 
@@ -30,7 +31,9 @@ const Roadmap: FC = () => {
     ];
 
     return <section className={styles.root}>
-        <Title className={styles.title} size={'medium'} isNoShadow={true} as={'h2'}>KRAKEN Roadmap</Title>
+        <FadeOut>
+            <Title className={styles.title} size={'medium'} isNoShadow={true} as={'h2'}>KRAKEN Roadmap</Title>
+        </FadeOut>
 
         <div className={styles.content}>
             <picture>

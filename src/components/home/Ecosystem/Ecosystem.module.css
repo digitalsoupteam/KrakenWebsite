@@ -4,6 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top left;
+    overflow: hidden;
 
     &::after,
     &::before {

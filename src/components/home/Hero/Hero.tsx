@@ -1,11 +1,10 @@
 import React, {FC} from 'react';
 import Image from "next/image";
-import {motion} from 'framer-motion';
 import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
 import {Button, Text, Title} from "@/components/ui";
-import {Socials} from "@/components/common";
+import {FadeOut, SlideIn, Socials} from "@/components/common";
 
 import styles from './Hero.module.css';
 
@@ -15,16 +14,16 @@ const Hero: FC = () => {
     let section = <section className={styles.root}>
         <Wrapper>
             <div className={styles.inner}>
-                <div className={styles.heroImage}>
-                    <motion.div className={styles.krakenImage}>
+                <SlideIn className={styles.heroImage}>
+                    <div className={styles.krakenImage}>
                         <Image src={'/images/kraken.png'} width="297" height="231" alt="kraken"/>
-                    </motion.div>
-                    <motion.div className={styles.krakenLogo}>
+                    </div>
+                    <div className={styles.krakenLogo}>
                         <Image src={'/images/logo.png'} width="326" height="72" alt="kraken logo"/>
-                    </motion.div>
-                </div>
+                    </div>
+                </SlideIn>
 
-                <div className={styles.content}>
+                <FadeOut className={styles.content}>
                     <Title className={styles.title} size={'large'} isNoShadow={true}>{t('hero:title')}</Title>
                     <Text className={styles.text} size={'big'}>{t('hero:text')}</Text>
                     <div className={styles.buttons}>
@@ -33,7 +32,7 @@ const Hero: FC = () => {
                         </Button>
                         <Socials/>
                     </div>
-                </div>
+                </FadeOut>
             </div>
         </Wrapper>
     </section>;

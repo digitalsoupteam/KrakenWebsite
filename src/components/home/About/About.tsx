@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
+import {FadeOut, SlideIn} from "@/components/common";
 import {Button, Text, Title} from "@/components/ui";
 import ArrowIcon from '/public/images/arrow.svg';
 
@@ -46,34 +47,58 @@ const About: FC = () => {
     ];
 
     return <section className={styles.root} id="about">
-            <div className={styles.textContainer}>
-                <Wrapper>
-                    <Title className={styles.title} size={'big'} isNoShadow={true} as={'h2'}>{t('about:title')}</Title>
-                    <Text className={styles.text} size={'medium'}>{t('about:text')}</Text>
-                </Wrapper>
-            </div>
+        <SlideIn className={styles.textContainer}>
+            <Wrapper>
+                <Title className={styles.title} size={'big'} isNoShadow={true} as={'h2'}>{t('about:title')}</Title>
+                <Text className={styles.text} size={'medium'}>{t('about:text')}</Text>
+            </Wrapper>
+        </SlideIn>
 
-            <div className={styles.projects}>
-                <Wrapper>
-                    <div className={styles.projectsLeft}>
-                        {itemsLeft && itemsLeft.map((item) => (
-                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link} key={item.name}>
+        <div className={styles.projects}>
+            <Wrapper>
+                <div className={styles.projectsLeft}>
+                    {itemsLeft && itemsLeft.map((item, index) => (
+                        <FadeOut
+                            delay={0.5 * index}
+                            key={item.name}
+                        >
+                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true}
+                                    locked={!item.link} disabled={!item.link} key={item.name}>
                                 {item.name} {item.link && <ArrowIcon/>}
                             </Button>
-                        ))}
-                    </div>
-                    <motion.div className={styles.kraken}>
-                        <Image src="/images/kraken-on-whale.png" width="363" height="340" alt=""/>
-                    </motion.div>
-                    <div className={styles.projectsRight}>
-                        {itemsRight && itemsRight.map((item) => (
-                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true} locked={!item.link} disabled={!item.link} key={item.name}>
+                        </FadeOut>
+                    ))}
+                </div>
+                <motion.div
+                    className={styles.kraken}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                        duration: 1.5,
+                        ease: 'easeInOut',
+                    }}
+                    variants={{
+                        hidden: {x: '100%', y: '-100%', scale: 0},
+                        visible: {x: 0, y: '-50%', scale: 1},
+                    }}
+                >
+                    <Image src="/images/kraken-on-whale.png" width="363" height="340" alt=""/>
+                </motion.div>
+                <div className={styles.projectsRight}>
+                    {itemsRight && itemsRight.map((item, index) => (
+                        <FadeOut
+                            delay={0.5 * index}
+                            key={item.name}
+                        >
+                            <Button className={styles.button} href={item.link} target={"_blank"} isLight={true}
+                                    locked={!item.link} disabled={!item.link}>
                                 {item.name} {item.link && <ArrowIcon/>}
                             </Button>
-                        ))}
-                    </div>
-                </Wrapper>
-            </div>
+                        </FadeOut>
+                    ))}
+                </div>
+            </Wrapper>
+        </div>
     </section>
 };
 
