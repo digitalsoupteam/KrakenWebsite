@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import Link from "next/link";
 
-import TelegramIcon from '/public/telegram.svg';
-import TwitterIcon from '/public/twitter.svg';
+import TelegramIcon from '/public/images/telegram.svg';
+import TwitterIcon from '/public/images/twitter.svg';
 
 import styles from './Socials.module.css';
 

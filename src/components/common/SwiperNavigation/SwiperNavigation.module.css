@@ -1,0 +1,36 @@
+.root {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18px;
+    height: 40px;
+    pointer-events: auto;
+    border: none;
+    background: transparent;
+    padding-left: 2px;
+    transition: var(--tr-default);
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.button svg {
+    width: 9px;
+}
+
+.buttonNext {
+    transform: rotate(180deg);
+}

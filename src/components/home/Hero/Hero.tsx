@@ -1,33 +1,42 @@
-import React, {FC, useRef} from 'react';
+import React, {FC} from 'react';
 import Image from "next/image";
-import {motion, useScroll, useTransform, MotionValue} from 'framer-motion';
+import {useTranslation} from "react-i18next";
 
 import {Wrapper} from "@/components/layout";
-import {CopyLink, Socials} from "@/components/common";
+import {Button, Text, Title} from "@/components/ui";
+import {FadeOut, SlideIn, Socials} from "@/components/common";
 
 import styles from './Hero.module.css';
 
 const Hero: FC = () => {
-    const targetRef = useRef(null);
-    const {scrollYProgress} = useScroll({target: targetRef});
+    const {t} = useTranslation();
 
-    const distanceDivider = 0.5;
-    const useParallax = (value: MotionValue, distance: number) => {
-        return useTransform(value, [0, 1], [0, distance / distanceDivider]);
-    };
-
-    return <section className={styles.root}>
+    let section = <section className={styles.root}>
         <Wrapper>
-            <motion.div className={styles.inner} style={{y: useParallax(scrollYProgress, 100)}}>
-                <Image className={styles.logo} src={'/kraken.png'} width="300" height="100" alt={'kraken logo'}/>
+            <div className={styles.inner}>
+                <SlideIn className={styles.heroImage}>
+                    <div className={styles.krakenImage}>
+                        <Image src={'/images/kraken.png'} width="297" height="231" alt="kraken"/>
+                    </div>
+                    <div className={styles.krakenLogo}>
+                        <Image src={'/images/logo.png'} width="326" height="72" alt="kraken logo"/>
+                    </div>
+                </SlideIn>
 
-                <CopyLink text={'This will be the address of the token'}
-                          copyText={'This will be the address of the token'} isLarge={true}/>
-
-                <Socials/>
-            </motion.div>
+                <FadeOut className={styles.content}>
+                    <Title className={styles.title} size={'large'} isNoShadow={true}>{t('hero:title')}</Title>
+                    <Text className={styles.text} size={'big'}>{t('hero:text')}</Text>
+                    <div className={styles.buttons}>
+                        <Button className={styles.buy} isLight={true} disabled={true} locked={true}>
+                            {t('common:buy')}
+                        </Button>
+                        <Socials/>
+                    </div>
+                </FadeOut>
+            </div>
         </Wrapper>
-    </section>
+    </section>;
+    return section
 };
 
 export default Hero;

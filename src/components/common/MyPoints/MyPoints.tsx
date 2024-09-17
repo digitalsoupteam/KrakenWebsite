@@ -11,7 +11,7 @@ const MyPoints: FC = () => {
         <div className={styles.yourPoints}>
             <Title className={styles.yourPointsTitle} size={'small'}>Your points</Title>
 
-            <Image className={styles.tentacles} src={'/your-points-bg.png'} width="300" height="100" alt="" />
+            <Image className={styles.tentacles} src={'/images/your-points-bg.png'} width="300" height="100" alt="" />
 
             <div className={styles.yourPointsItem}>
                 <div className={styles.stakingPoints}>
@@ -27,7 +27,7 @@ const MyPoints: FC = () => {
             <div className={styles.yourPointsItem}>
                 <div className={styles.totalPoints}>
                     <span>Total points</span>
-                    <span>{21.12} <Image className={styles.krakenIcon} src={'/kraken-small.svg'} width="16" height="16"
+                    <span>{21.12} <Image className={styles.krakenIcon} src={'/images/kraken-small.svg'} width="16" height="16"
                                          alt={'kraken icon'}/>
                     </span>
                 </div>

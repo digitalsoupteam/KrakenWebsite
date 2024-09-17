@@ -1,14 +1,23 @@
-.root {
+.title {
+    text-align: center;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 60px;
+    }
+}
+
+.content {
     position: relative;
     min-height: 100vh;
-    background-image: url('/bg-mobile.png');
+    background-image: url('/images/bg-mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right top;
     overflow: hidden;
 
     @media screen and (min-width: 768px) {
-        background-image: url('/bg-desktop.png');
+        background-image: url('/images/bg-desktop.png');
     }
 }
 
@@ -22,7 +31,7 @@
     padding-top: 10vw;
     flex-direction: column-reverse;
     justify-content: space-between;
-    height: 100%;
+    height: calc(100% - 52px);
     margin: 0 auto;
 
     @media screen and (min-width: 768px) {
@@ -40,6 +49,7 @@
     border-radius: 4vw;
     font-size: 3.5vw;
     width: 46vw;
+    white-space: pre-wrap;
 
     @media screen and (min-width: 768px) {
         padding: 20px;
@@ -112,7 +122,8 @@
 
     @media screen and (min-width: 768px) {
         width: 18vw;
-        top: 5vw;
+        /*top: 5vw;*/
+        top: 10vw;
         left: 36vw;
         margin: 0;
     }

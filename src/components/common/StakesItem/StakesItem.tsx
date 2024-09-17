@@ -3,7 +3,7 @@ import Image from "next/image";
 import clsx from "clsx";
 
 import {Button} from "@/components/ui";
-import LockedIcon from '/public/locked.svg';
+import LockedIcon from '/public/images/locked.svg';
 
 import styles from './StakesItem.module.css';
 
@@ -23,7 +23,7 @@ const StakesItem: FC<StakesItemProps> = ({unstakingDate, stakedFrom, points, tok
 
     return <div className={styles.root}>
         <div className={styles.heading}>
-            <Image className={styles.logo} src={'/kraken.png'} width="60" height="60" alt={'kraken logo'}/>
+            <Image className={styles.logo} src={'/images/kraken.png'} width="60" height="60" alt={'kraken logo'}/>
             <div className={styles.title}>Unstake availability</div>
             <div className={styles.date}>
                 {unstakingDateObject.toLocaleString('en-US', {month: 'long'})} {unstakingDateObject.getDate()}, {unstakingDateObject.getFullYear()}
@@ -35,7 +35,7 @@ const StakesItem: FC<StakesItemProps> = ({unstakingDate, stakedFrom, points, tok
                 Points
                 <span className={styles.value}>
                     <span>{points}</span>
-                    <Image className={styles.krakenIcon} src={'/kraken-small.svg'} width="16" height="16"
+                    <Image className={styles.krakenIcon} src={'/images/kraken-small.svg'} width="16" height="16"
                            alt={'kraken icon'}/>
                 </span>
             </div>

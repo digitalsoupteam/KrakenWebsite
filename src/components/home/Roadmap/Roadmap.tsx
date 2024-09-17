@@ -1,76 +1,75 @@
 import React, {FC} from 'react';
-import {motion} from "framer-motion";
 import Image from "next/image";
+import {motion} from "framer-motion";
+import {useTranslation} from "react-i18next";
+
+import {Title} from "@/components/ui";
+import {FadeOut} from "@/components/common";
 
 import styles from './Roadmap.module.css';
 
 const Roadmap: FC = () => {
+    const {t} = useTranslation();
+
     const items = [
         {
             name: 'listing DEX',
-            content: <>
-                Listing on DEX <br/>
-                The first stage of $KRAKEN. Listing on Solana ecosystem DEX (Raydium, Jupiter).
-            </>,
+            content: t('roadmap:dex'),
         },
         {
             name: 'Nft minting',
-            content: <>
-                NFT minting <br/>
-                Building 444 unique NFTs. Minting RELEASE THE KRAKEN collection. Listing collection on Magic Eden.
-            </>,
+            content: t('roadmap:nft'),
         },
         {
             name: 'Geocaching',
-            content: <>
-                Geocaching platform and $KRAKEN fund.
-                Building $KRAKEN Geocaching WEB3 platform. Launch the platform and start geocaching all over the
-                world.
-                Launch $KRAKEN charity fund for the protection of World’s Ocean.
-            </>,
+            content: t('roadmap:geocaching'),
         },
         {
             name: 'listing CEX',
-            content: <>
-                Listing on CEX <br/>
-                Listing RELEASE KRAKEN on CEX
-            </>
+            content: t('roadmap:cex'),
         }
     ];
 
-    return <section className={styles.root}>
-        <picture>
-            <source media="(min-width: 768px)" srcSet="/roadmap-desktop.png"/>
-            <Image className={styles.roadmap} src={'/roadmap-mobile.png'} width="300" height="100" alt="roadmap"/>
-        </picture>
+    return <section className={styles.root} id="roadmap">
+        <FadeOut>
+            <Title className={styles.title} size={'medium'} isNoShadow={true} as={'h2'}>KRAKEN Roadmap</Title>
+        </FadeOut>
 
-        <picture>
-            <source media="(min-width: 768px)" srcSet="/asteroids-big-desktop.png"/>
-            <Image className={styles.asteroids} src={'/asteroids-big-mobile.png'} width="300" height="100"
-                   alt="asteroids"/>
-        </picture>
+        <div className={styles.content}>
+            <picture>
+                <source media="(min-width: 768px)" srcSet="/images/roadmap-desktop.png"/>
+                <Image className={styles.roadmap} src={'/images/roadmap-mobile.png'} width="300" height="100"
+                       alt="roadmap"/>
+            </picture>
 
-        <ol className={styles.list}>
-            {items && items.length && items.map((item, index) => (
-                <motion.li
-                    className={styles.item}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                        duration: 0.8,
-                        ease: 'easeInOut',
-                        delay: 0.1 * index
-                    }}
-                    variants={{
-                        hidden: {y: 100, opacity: 0},
-                        visible: {y: 0, opacity: 1},
-                    }}
-                    key={item.name}
-                >
-                    {item.content}
-                </motion.li>
-            ))}
-        </ol>
+            <picture>
+                <source media="(min-width: 768px)" srcSet="/images/asteroids-big-desktop.png"/>
+                <Image className={styles.asteroids} src={'/images/asteroids-big-mobile.png'} width="300" height="100"
+                       alt="asteroids"/>
+            </picture>
+
+            <ol className={styles.list}>
+                {items && items.length && items.map((item, index) => (
+                    <motion.li
+                        className={styles.item}
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{
+                            duration: 0.8,
+                            ease: 'easeInOut',
+                            delay: 0.1 * index
+                        }}
+                        variants={{
+                            hidden: {y: 100, opacity: 0},
+                            visible: {y: 0, opacity: 1},
+                        }}
+                        key={item.name}
+                    >
+                        {item.content}
+                    </motion.li>
+                ))}
+            </ol>
+        </div>
     </section>
 };
 

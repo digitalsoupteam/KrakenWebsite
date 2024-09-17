@@ -1,27 +1,27 @@
 .root {
     z-index: 1;
-    position: relative;
-    /*margin-bottom: 110px;*/
-
-    /*@media screen and (min-width: 768px) {*/
-    /*    margin-bottom: 70px;*/
-    /*}*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .inner {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 30px 0;
+    gap: 6px;
 }
 
 .logo {
     display: block;
-    width: 246px;
+    width: 196px;
+    margin-right: auto;
 
-    @media screen and (min-width: 768px) {
-        width: 220px;
+    @media screen and (min-width: 1024px) {
+        margin: 0;
+        width: 250px;
     }
 }
 
@@ -31,6 +31,7 @@
 }
 
 .root .burgerButton {
+    order: 1;
     padding: 13px 17px;
     flex-direction: column;
     gap: 4px;
@@ -88,9 +89,11 @@
         position: static;
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 24px;
         padding: 0;
         background-color: transparent;
+        margin: 0 auto;
     }
 }
 
@@ -99,7 +102,7 @@
 }
 
 .menuLink {
-    color: var(--light);
+    color: var(--white);
     font-size: 20px;
     transition: var(--tr-default);
 
@@ -114,7 +117,7 @@
         border: 1px solid var(--blue-dark);
         border-radius: var(--br-medium);
         padding: 6px 24px;
-        background: var(--dark-gradient);
+        background: transparent;
 
         @media (hover: hover) {
             &:hover,
@@ -126,16 +129,25 @@
     }
 }
 
+.langSwitcher {
+    order: 1;
+    flex-shrink: 0;
+}
+
+.loginMobile {
+    @media screen and (min-width: 1024px) {
+    display: none;
+    }
+}
+
 .login {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    width: fit-content;
-    margin: 0 auto;
+    display: none;
 
     @media screen and (min-width: 1024px) {
+        display: block;
         position: static;
+        width: fit-content;
         margin: 0;
+        order: 2;
     }
 }

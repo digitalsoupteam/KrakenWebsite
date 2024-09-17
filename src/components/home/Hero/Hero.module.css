@@ -1,32 +1,140 @@
 .root {
-    min-height: calc(100vh - 106px);
-    background-image: url('/hero-bg.jpg');
+    position: relative;
+    background-image: url('/images/hero-bg-mob.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 100px;
 
     @media screen and (min-width: 768px) {
-        min-height: calc(100vh - 102px);
+        background-image: url('/images/hero-bg.png');
+        padding-top: 177px;
     }
+
+    @media screen and (min-width: 1024px) {
+        padding-bottom: 180px;
+    }
+}
+
+.root::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 232px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+}
+
+.root::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 232px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
 }
 
 .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding-top: 50px;
-
     @media screen and (min-width: 768px) {
-        padding-top: 0;
+        margin: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        /*grid-template-columns: 530px 1fr;*/
+        grid-template-columns: 585px 1fr;
+        gap: 120px;
     }
 }
 
-.logo {
-    width: 100%;
-    height: auto;
+.heroImage {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.krakenImage {
+    width: 297px;
 
     @media screen and (min-width: 768px) {
-        max-width: 50%;
+        width: 650px;
     }
+
+    @media screen and (min-width: 1024px) {
+        width: auto;
+    }
+}
+
+.krakenLogo {
+    position: absolute;
+    top: 105px;
+    left: -14px;
+    right: -14px;
+    width: 326px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        top: 227px;
+        left: -31px;
+        right: -31px;
+        width: 711px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: 45%;
+        width: auto;
+    }
+}
+
+.content {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: 1024px) {
+        order: -1;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: start;
+    }
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: start;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-start;
+    }
+}
+
+.buy {
+    width: 226px;
 }

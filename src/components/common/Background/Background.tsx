@@ -31,7 +31,7 @@ const Background: FC = () => {
             className={styles.asteroids}
             style={{y: useParallax(scrollYProgress, 100, true)}}
         >
-            <Image src={'/asteroids.png'} width="134" height="116" alt={''}/>
+            <Image src={'/images/asteroids.png'} width="134" height="116" alt={''}/>
         </motion.div>
 
         <motion.div
@@ -39,8 +39,8 @@ const Background: FC = () => {
             style={{y: useParallax(scrollYProgress, 200, true)}}
         >
             <picture>
-                <source media={`(min-width: 1024px)`} srcSet={'/chest.png'}/>
-                <Image src={'/chest-mobile.png'} width="182" height="212" alt={''}/>
+                <source media={`(min-width: 1024px)`} srcSet={'/images/chest.png'}/>
+                <Image src={'/images/chest-mobile.png'} width="182" height="212" alt={''}/>
             </picture>
         </motion.div>
 
@@ -58,7 +58,7 @@ const Background: FC = () => {
                 visible: {x: 0, y: '0', rotate: '0'},
             }}
         >
-            <Image src={'/planets.png'} width="134" height="116" alt={''}/>
+            <Image src={'/images/planets.png'} width="134" height="116" alt={''}/>
         </motion.div>
 
         <motion.div
@@ -75,7 +75,7 @@ const Background: FC = () => {
                 visible: {x: 0, y: '0'},
             }}
         >
-            <Image src={'/rocket.png'} width="134" height="116" alt={''}/>
+            <Image src={'/images/rocket.png'} width="134" height="116" alt={''}/>
         </motion.div>
     </section>
 };
