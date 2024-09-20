@@ -14,19 +14,19 @@ const Roadmap: FC = () => {
     const items = [
         {
             name: 'listing DEX',
-            content: t('roadmap:dex'),
+            content: t('roadmap:1'),
         },
         {
             name: 'Nft minting',
-            content: t('roadmap:nft'),
+            content: t('roadmap:2'),
         },
         {
             name: 'Geocaching',
-            content: t('roadmap:geocaching'),
+            content: t('roadmap:3'),
         },
         {
             name: 'listing CEX',
-            content: t('roadmap:cex'),
+            content: t('roadmap:4'),
         }
     ];
 
