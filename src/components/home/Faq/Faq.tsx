@@ -19,10 +19,6 @@ const Faq: FC = () => {
     const swiperRef = useRef<SwiperType | null>(null);
     const items = [
         {
-            title: t('faq:items:about:title'),
-            text: t('faq:items:about:text'),
-        },
-        {
             title: t('faq:items:how-geocaching:title'),
             text: t('faq:items:how-geocaching:text'),
         },
