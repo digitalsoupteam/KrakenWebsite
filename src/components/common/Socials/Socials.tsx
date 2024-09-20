@@ -9,7 +9,7 @@ import styles from './Socials.module.css';
 const Socials: FC = () => {
     const socialItems = [
         {
-            link: 'https://t.me/thekrakencoin',
+            link: 'https://t.me/releasethekraken',
             icon: <TelegramIcon className={styles.icon}/>
         },
         {

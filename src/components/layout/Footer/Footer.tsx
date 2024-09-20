@@ -19,18 +19,18 @@ const Footer: FC = () => {
             name: t('footer:about'),
             link: '/#about',
         },
-        {
-            name: t('footer:buy'),
-            link: '/#',
-        },
-        {
-            name: t('footer:white-paper'),
-            link: '/#',
-        },
-        {
-            name: t('footer:referrals'),
-            link: '/#',
-        },
+        // {
+        //     name: t('footer:buy'),
+        //     link: '/#',
+        // },
+        // {
+        //     name: t('footer:white-paper'),
+        //     link: '/#',
+        // },
+        // {
+        //     name: t('footer:referrals'),
+        //     link: '/#',
+        // },
     ];
 
     const secondaryNav = [
@@ -93,7 +93,7 @@ const Footer: FC = () => {
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
                         {
-                            primaryNav && primaryNav.length && primaryNav.map(menuItem => (
+                            primaryNav && primaryNav.length > 0 && primaryNav.map(menuItem => (
                                 <li key={menuItem.name}>
                                     <Link className={styles.navLink} href={menuItem.link}>{menuItem.name}</Link>
                                 </li>
@@ -111,13 +111,13 @@ const Footer: FC = () => {
 
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
-                        {
-                            secondaryNav && secondaryNav.length && secondaryNav.map(menuItem => (
-                                <li key={menuItem.name}>
-                                    <Link className={styles.navLink} href={menuItem.link}>{menuItem.name}</Link>
-                                </li>
-                            ))
-                        }
+                        {/*{*/}
+                        {/*    secondaryNav && secondaryNav.length > 0 && secondaryNav.map(menuItem => (*/}
+                        {/*        <li key={menuItem.name}>*/}
+                        {/*            <Link className={styles.navLink} href={menuItem.link}>{menuItem.name}</Link>*/}
+                        {/*        </li>*/}
+                        {/*    ))*/}
+                        {/*}*/}
                     </ul>
                 </nav>
             </div>
