@@ -41,7 +41,7 @@ const Header: FC = () => {
                     <Image className={styles.logoImage} src="/images/logo.png" width="246" height="40" alt={""}/>
                 </Link>
 
-                <LangSwitcher className={styles.langSwitcher}/>
+                {/*<LangSwitcher className={styles.langSwitcher}/>*/}
 
                 <Button className={clsx(styles.burgerButton, isMenuOpened && styles.burgerButtonActive)}
                         onClick={() => setIsMenuOpened(!isMenuOpened)}>

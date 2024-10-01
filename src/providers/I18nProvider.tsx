@@ -31,7 +31,8 @@ const I18nProvider: FC<PropsWithChildren> = ({children}) => {
             resources,
             defaultNS: 'main',
             fallbackLng: 'en',
-            supportedLngs: ['en', 'ru'],
+            // supportedLngs: ['en', 'ru'],
+            supportedLngs: ['en'],
             ns: ['menu'],
             detection: detectionOptions,
             interpolation: {
