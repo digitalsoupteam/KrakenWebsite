@@ -13,7 +13,7 @@ const Socials: FC = () => {
             icon: <TelegramIcon className={styles.icon}/>
         },
         {
-            link: 'https://twitter.com/TheKrakenCoin',
+            link: 'https://x.com/srtkraken?s=21',
             icon: <TwitterIcon className={styles.icon}/>
         }
     ];
