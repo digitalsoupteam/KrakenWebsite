@@ -12,6 +12,7 @@ import SwiperNavigation from "./SwiperNavigation/SwiperNavigation";
 import LangSwitcher from "./LangSwitcher/LangSwitcher";
 import SlideIn from './SlideIn/SlideIn';
 import FadeOut from './FadeOut/FadeOut';
+import Partners from './Partners/Partners';
 
 export {
     Staking,
@@ -27,5 +28,6 @@ export {
     SwiperNavigation,
     LangSwitcher,
     SlideIn,
-    FadeOut
+    FadeOut,
+    Partners
 };
