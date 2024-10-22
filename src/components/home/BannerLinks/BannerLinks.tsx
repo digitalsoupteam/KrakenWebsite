@@ -36,8 +36,8 @@ const BannerLinks: FC = () => {
     return <section>
         <Wrapper>
             <div className={styles.inner}>
-                {items && items.length > 0 && items.map(item => (
-                <FadeOut className={styles.item} key={item.title.text} style={{backgroundImage: `url(${item.background})`}}>
+                {items && items.length > 0 && items.map((item, index) => (
+                <FadeOut className={styles.item} key={item.title.text} delay={0.5 * index} style={{backgroundImage: `url(${item.background})`}}>
                     <Title className={styles.title} size={'big'} isNoShadow={true} as={'h3'}>
                         {item.title.text}
                         <Image className={styles.icon} src={item.title.icon} width={'38'} height={'38'} alt={''}/>
