@@ -6,5 +6,6 @@ import EcosystemCta from './EcosystemCta/EcosystemCta';
 import Subscription from './Subscription/Subscription';
 import Ecosystem from "./Ecosystem/Ecosystem";
 import Faq from './Faq/Faq';
+import BannerLinks from './BannerLinks/BannerLinks';
 
-export {Hero, About, Roadmap, Tags, EcosystemCta, Subscription, Ecosystem, Faq};
+export {Hero, About, Roadmap, Tags, EcosystemCta, Subscription, Ecosystem, Faq, BannerLinks};
