@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
+    overflow: hidden;
 
     @media screen and (min-width: 768px) {
         background-image: url('/images/hero-bg.png');
@@ -49,6 +50,7 @@
 }
 
 .heroImage {
+    z-index: 1;
     position: relative;
     width: fit-content;
     margin: 0 auto;
@@ -137,4 +139,34 @@
 
 .buy {
     width: 226px;
+}
+
+.tentacleTop,
+.tentacleBottom {
+    z-index: 0;
+    position: absolute;
+}
+
+.tentacleTop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        top: 0;
+        right: 0;
+        max-width: 25%;
+    }
+}
+
+.tentacleBottom {
+    display: none;
+    right: 0;
+    bottom: 0;
+    max-width: 60%;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        bottom: 0;
+        max-width: 60%;
+    }
 }

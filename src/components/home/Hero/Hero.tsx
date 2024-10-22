@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {motion} from 'framer-motion';
 import Image from "next/image";
 import {useTranslation} from "react-i18next";
 
@@ -35,6 +36,36 @@ const Hero: FC = () => {
                 </FadeOut>
             </div>
         </Wrapper>
+        <motion.div
+            className={styles.tentacleTop}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+                duration: 1.5,
+                ease: 'easeInOut',
+            }}
+            variants={{
+                hidden: {x: '90%'},
+                visible: {x: 0},
+            }}
+        >
+            <Image src={'/images/hero-tentacles-t.png'} width={'300'} height={'100'} alt={''}/>
+        </motion.div>
+        <motion.div
+            className={styles.tentacleBottom}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+                duration: 1.5,
+                ease: 'easeInOut',
+            }}
+            variants={{
+                hidden: {x: '90%'},
+                visible: {x: 0}
+            }}
+        >
+            <Image src={'/images/hero-tentacles-b.png'} width={'300'} height={'100'} alt={''}/>
+        </motion.div>
     </section>;
     return section
 };
