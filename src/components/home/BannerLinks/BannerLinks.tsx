@@ -1,11 +1,12 @@
 import React, {FC} from 'react';
+import Image from "next/image";
 
-import {Wrapper} from "@/components/layout";
-import {Button, Title} from "@/components/ui";
 import ArrowIcon from '/public/images/arrow.svg';
+import {Wrapper} from "@/components/layout";
+import {FadeOut} from "@/components/common";
+import {Button, Title} from "@/components/ui";
 
 import styles from './BannerLinks.module.css';
-import Image from "next/image";
 
 const BannerLinks: FC = () => {
     const items = [
@@ -36,14 +37,13 @@ const BannerLinks: FC = () => {
         <Wrapper>
             <div className={styles.inner}>
                 {items && items.length > 0 && items.map(item => (
-
-                <div className={styles.item} key={item.title.text} style={{backgroundImage: `url(${item.background})`}}>
+                <FadeOut className={styles.item} key={item.title.text} style={{backgroundImage: `url(${item.background})`}}>
                     <Title className={styles.title} size={'big'} isNoShadow={true} as={'h3'}>
                         {item.title.text}
                         <Image className={styles.icon} src={item.title.icon} width={'38'} height={'38'} alt={''}/>
                     </Title>
                     <Button className={styles.button} href={item.button.link} isLight={true} target={'_blank'}>{item.button.text} <ArrowIcon/></Button>
-                </div>
+                </FadeOut>
                 ))}
             </div>
         </Wrapper>
