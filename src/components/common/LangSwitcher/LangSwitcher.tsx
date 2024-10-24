@@ -1,3 +1,5 @@
+'use client';
+
 import React, {FC, useEffect, useState} from 'react';
 import clsx from 'clsx';
 import {useTranslation} from 'react-i18next';

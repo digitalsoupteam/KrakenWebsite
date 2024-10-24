@@ -1,3 +1,5 @@
+'use client';
+
 import React, {FC, useState, useCallback} from 'react';
 import clsx from "clsx";
 import {Wallet} from "@wallet-standard/base";
