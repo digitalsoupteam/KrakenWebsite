@@ -8,9 +8,16 @@ import {BannerLinks} from "@/components/common";
 
 import styles from './page.module.css';
 
+type Result = {
+    message: string;
+    prize: null | string;
+};
+
 const QuestResult: FC = () => {
     const [isShowForm, setIsShowForm] = useState(false);
     const [prize, setPrize] = useState<null | 'T-Shirt' | 'Empty' | 'Treasure'>(null);
+    const [verificationResult, setVerificationResult] = useState<Result | null>(null);
+    const validResults = ['T-Shirt', 'Treasure', 'Empty'];
     const prizes = {
         'T-Shirt': {
             image: '/images/t-shirt.png',
@@ -29,9 +36,19 @@ const QuestResult: FC = () => {
         },
     };
 
-    useEffect(() => {
+    const onSuccessVerification = (result: Result) => {
+        setVerificationResult(result)
+    };
 
-    }, []);
+    useEffect(() => {
+        if (!verificationResult) return;
+
+        const resultPrize = verificationResult.prize;
+
+        if (resultPrize && validResults.includes(resultPrize)) {
+            setPrize(resultPrize as 'T-Shirt' | 'Treasure' | 'Empty');
+        }
+    }, [verificationResult]);
 
     return <>
         {
@@ -41,7 +58,8 @@ const QuestResult: FC = () => {
                 {!isShowForm &&
                     <Button className={styles.button} isLight={true} onClick={() => setIsShowForm(true)}>Let&apos;s
                         roll</Button>}
-                {isShowForm && <UserVerification className={styles.form} onSuccess={() => console.log('setting result')}/>}
+                {isShowForm &&
+                    <UserVerification className={styles.form} onSuccess={onSuccessVerification}/>}
             </MainBlock>
         }
         {prize && <MainBlock image={prizes[prize].image} title={prizes[prize].title} text={prizes[prize].text}/>}
