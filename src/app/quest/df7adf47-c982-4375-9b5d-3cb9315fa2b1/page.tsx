@@ -1,5 +1,6 @@
 'use client';
 import React, {FC, useState, useEffect} from 'react';
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 
 import {MainBlock} from "@/components/quest";
 import {Button} from "@/components/ui";
@@ -63,6 +64,7 @@ const QuestResult: FC = () => {
             </MainBlock>
         }
         {prize && <MainBlock image={prizes[prize].image} title={prizes[prize].title} text={prizes[prize].text}/>}
+        {prize && prize !== 'Empty' && <Fireworks className={styles.canvas} autorun={{ speed: 0.5 }}/>}
         <BannerLinks/>
     </>
 };
