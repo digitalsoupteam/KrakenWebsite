@@ -38,6 +38,8 @@
 }
 
 .inner {
+    z-index: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +53,7 @@
     object-fit: contain;
     object-position: center;
     margin-bottom: 56px;
+    filter: drop-shadow(14px 11px 33px rgba(0, 0, 0, 0.5));
 }
 
 .imageWide {
@@ -64,4 +67,13 @@
 .text {
     font-family: var(--geologica);
     text-align: center;
+    white-space: pre-wrap;
+}
+
+.children {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 32px;
 }

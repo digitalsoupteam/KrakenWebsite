@@ -22,3 +22,7 @@
 .root[type="number"] {
     -moz-appearance: textfield;
 }
+
+.root.invalid {
+    outline: 1px solid coral;
+}

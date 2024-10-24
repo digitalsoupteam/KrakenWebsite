@@ -1,0 +1,22 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        gap: 32px;
+    }
+}
+
+.input,
+.submit {
+    height: 56px;
+}
+
+.input {
+    text-align: center;
+}
+
+.submit {
+    width: 100%;
+}
