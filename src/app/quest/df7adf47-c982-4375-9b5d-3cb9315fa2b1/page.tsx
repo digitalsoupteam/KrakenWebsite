@@ -41,7 +41,7 @@ const QuestResult: FC = () => {
                 {!isShowForm &&
                     <Button className={styles.button} isLight={true} onClick={() => setIsShowForm(true)}>Let&apos;s
                         roll</Button>}
-                {isShowForm && <UserVerification className={styles.form}/>}
+                {isShowForm && <UserVerification className={styles.form} onSuccess={() => console.log('setting result')}/>}
             </MainBlock>
         }
         {prize && <MainBlock image={prizes[prize].image} title={prizes[prize].title} text={prizes[prize].text}/>}
