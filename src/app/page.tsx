@@ -1,8 +1,8 @@
 'use client';
 import React, {FC} from 'react';
 
-import {Partners} from '@/components/common';
-import {About, Ecosystem, EcosystemCta, Faq, Hero, Roadmap, Subscription, Tags, BannerLinks} from "@/components/home";
+import {Partners, BannerLinks} from '@/components/common';
+import {About, Ecosystem, EcosystemCta, Faq, Hero, Roadmap, Subscription, Tags} from "@/components/home";
 
 const Home: FC = () => {
     return (

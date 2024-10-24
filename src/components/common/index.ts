@@ -13,6 +13,7 @@ import LangSwitcher from "./LangSwitcher/LangSwitcher";
 import SlideIn from './SlideIn/SlideIn';
 import FadeOut from './FadeOut/FadeOut';
 import Partners from './Partners/Partners';
+import BannerLinks from "./BannerLinks/BannerLinks";
 
 export {
     Staking,
@@ -29,5 +30,6 @@ export {
     LangSwitcher,
     SlideIn,
     FadeOut,
-    Partners
+    Partners,
+    BannerLinks
 };
